@@ -265,7 +265,7 @@
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Mon May 11 2026 11:15:01 GMT+0800">2026-05-11 11:15:01</span>
+                    <span class="datetime" data-updated="Mon May 11 2026 16:10:29 GMT+0800">2026-05-11 16:10:29</span>
                 </span>
             
         
@@ -281,15 +281,6 @@
             </span>
         
 
-        
-            <span class="post-tag meta-info-item border-box">
-                <ul class="post-tag-ul">
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/C-vs-C/">C++ vs. C</a></li>
-                        
-                    
-                </ul>
-            </span>
         
 
         
@@ -343,7 +334,7 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// name1和name2中有同名实体display()</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> name1::display;</span><br><span class="line"><span class="keyword">using</span> name2::display;</span><br><span class="line"><span class="built_in">display</span>() <span class="comment">// error 发生冲突</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p><strong>using声明机制的特点是：需要哪个实体的时候就引入到程序中，不需要的实体就不引入，尽可能减小犯错误的概率。</strong></p>
 <h3 id="1-1-4-命名空间的嵌套使用"><a href="#1-1-4-命名空间的嵌套使用" class="headerlink" title="1.1.4 命名空间的嵌套使用"></a>1.1.4 命名空间的嵌套使用</h3><p>类似于文件夹下还可以建立文件夹，命名空间中同样可以定义命名空间，那么问题来了，内层命名空间中的实体该如何访问呢</p>
-
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> outNamespace</span><br><span class="line">&#123;</span><br><span class="line"><span class="type">int</span> outNum = <span class="number">100</span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">outFunc</span><span class="params">()</span> </span>&#123; cout &lt;&lt; <span class="string">&quot;outFunc&quot;</span> &lt;&lt; endl; &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> inNamespace</span><br><span class="line">&#123;</span><br><span class="line"><span class="type">int</span> inNum = <span class="number">200</span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">inFunc</span><span class="params">()</span> </span>&#123; cout &lt;&lt; <span class="string">&quot;inFunc&quot;</span> &lt;&lt; endl; &#125;</span><br><span class="line"></span><br><span class="line">&#125; <span class="comment">// end of namespace inNamespace</span></span><br><span class="line"></span><br><span class="line">&#125; <span class="comment">// end of namespace outNamespace</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 方式一，使用作用域限定精确访问实体</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">method1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	cout &lt;&lt; outNamespace::inNamespace::num &lt;&lt; endl;</span><br><span class="line">	outNamespace::inNamespace::<span class="built_in">inFunc</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 方式二，using编译指令一次性引用inNamespace中实体</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">method2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">using</span> <span class="keyword">namespace</span> outNamespace::inNamespace;</span><br><span class="line">	cout &lt;&lt; num &lt;&lt; endl;</span><br><span class="line">	<span class="built_in">inFunc</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 方式三， using声明语句</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">method3</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">using</span> outNamespace::inNamespace::num;</span><br><span class="line">	<span class="keyword">using</span> outNamespace::inNamespace::inFunc;</span><br><span class="line">	cout &lt;&lt; num &lt;&lt; endl;</span><br><span class="line">	<span class="built_in">inFunc</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
                     
                 </div>
 
@@ -351,14 +342,6 @@
 
                 <div class="post-bottom-tags-and-share border-box">
                     <div>
-                        
-                            <ul class="post-tags-box border-box">
-                                
-                                    <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/C-vs-C/">C++ vs. C</a>
-                                    </li>
-                                
-                            </ul>
                         
                     </div>
                     <div>
