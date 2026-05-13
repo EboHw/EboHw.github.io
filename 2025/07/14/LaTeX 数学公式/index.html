@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Ebo">
+    
+    <title>
+        
+            LaTeX 数学公式 |
+        
+        Ebo&#39; Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"ebohw.github.io","root":"/","language":"en","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"Ebo' Blog","author":"Ebo","avatar":"/images/avatar.svg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives","tags":"/tags","categories":"/categories","links":"/links"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/dark_bg.svg","description":"Keep Coding, Keep Thinking.","hitokoto":false},"social_contact":{"enable":true,"links":{"github":"https://github.com/EboHw","weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":"ranqixxsss@gmail.com"}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":true,"tag":true,"post_datetime":"updated"},"post":{"author_badge":{"enable":false,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":false,"site_pv":true,"page_pv":true}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":true},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2024,"word_count":false,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{},"version":"4.2.5"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               Ebo&#39; Blog
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                HOME
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/archives">
+                                
+                                ARCHIVES
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/tags">
+                                
+                                TAGS
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/categories">
+                                
+                                CATEGORIES
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/links">
+                                
+                                LINKS
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="menu-text-color fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                            HOME
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
+                            
+                            ARCHIVES
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/tags">
+                            
+                            TAGS
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/categories">
+                            
+                            CATEGORIES
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/links">
+                            
+                            LINKS
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        LaTeX 数学公式
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.svg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">Ebo</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2025-07-14 00:00:00</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                    <span class="datetime" data-updated="Wed Dec 17 2025 16:58:30 GMT+0800">2025-12-17 16:58:30</span>
+                </span>
+            
+        
+
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/">数学公式</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body ">
+                    
+
+                    
+                         <p>搬运<a class="link"   target="_blank" rel="noopener" href="https://github.com/IHKYoung/LaTeX" >https://github.com/IHKYoung/LaTeX<i class="fas fa-external-link-alt"></i></a></p>
+<h1 id="📘-LaTeX-语法"><a href="#📘-LaTeX-语法" class="headerlink" title="📘 LaTeX 语法"></a>📘 <strong>LaTeX 语法</strong></h1><h2 id="📐-1-LaTeX-数学模式"><a href="#📐-1-LaTeX-数学模式" class="headerlink" title="📐 1. LaTeX 数学模式"></a><strong>📐 1. LaTeX 数学模式</strong></h2><h3 id="1-1-行内数学模式"><a href="#1-1-行内数学模式" class="headerlink" title="1.1. 行内数学模式"></a><strong>1.1. 行内数学模式</strong></h3><p>在文本中插入数学公式：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">$</span>E=mc<span class="built_in">^</span>2<span class="built_in">$</span></span><br></pre></td></tr></table></figure>
+
+<p>$E&#x3D;mc^2$ 行内模式的数学公式，适用于正文中的数学表达。</p>
+<h3 id="1-2-独立数学模式"><a href="#1-2-独立数学模式" class="headerlink" title="1.2. 独立数学模式"></a><strong>1.2. 独立数学模式</strong></h3><p>使数学公式独占一行：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br><span class="line">E=mc<span class="built_in">^</span>2</span><br><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br></pre></td></tr></table></figure>
+
+<p>独立模式的数学公式，适用于单独一行的数学表达。</p>
+<p>$$<br>E&#x3D;mc^2<br>$$</p>
+<h3 id="1-3-带编号公式"><a href="#1-3-带编号公式" class="headerlink" title="1.3. 带编号公式"></a><strong>1.3. 带编号公式</strong></h3><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\begin</span>&#123;equation&#125;</span><br><span class="line">E=mc<span class="built_in">^</span>2</span><br><span class="line"><span class="keyword">\end</span>&#123;equation&#125;</span><br></pre></td></tr></table></figure>
+
+<p>$$<br>\begin{equation}<br>E&#x3D;mc^2<br>\end{equation}<br>$$</p>
+<p>带有编号的数学公式，适用于论文或报告中公式引用。（Markdown中可能无法显示编号 ）</p>
+<hr>
+<h2 id="🔣-2-保留字符"><a href="#🔣-2-保留字符" class="headerlink" title="🔣 2. 保留字符"></a><strong>🔣 2. 保留字符</strong></h2><p>LaTeX 环境中具有特殊含义的保留字符，不能直接使用，必须通过指定的语法实现：</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>LaTeX 代码</th>
+<th>中文说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>#</td>
+<td><code>\#</code></td>
+<td>井号，数学环境中无特殊含义</td>
+</tr>
+<tr>
+<td>$</td>
+<td><code>\$</code></td>
+<td>美元符号，通常用于货币符号</td>
+</tr>
+<tr>
+<td>%</td>
+<td><code>\%</code></td>
+<td>百分号，表示百分比</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td><code>\&amp;</code></td>
+<td>与符号，通常用于逻辑表达</td>
+</tr>
+<tr>
+<td>_</td>
+<td><code>\_</code></td>
+<td>下划线，LaTeX 需要转义</td>
+</tr>
+<tr>
+<td>{}</td>
+<td><code>\{ \}</code></td>
+<td>花括号，用于分组</td>
+</tr>
+<tr>
+<td>\</td>
+<td><code>\backslash</code></td>
+<td>反斜杠，LaTeX 转义符</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="🔠-3-希腊字母"><a href="#🔠-3-希腊字母" class="headerlink" title="🔠 3. 希腊字母"></a><strong>🔠 3. 希腊字母</strong></h2><h3 id="3-1-小写希腊字母"><a href="#3-1-小写希腊字母" class="headerlink" title="3.1. 小写希腊字母"></a><strong>3.1. 小写希腊字母</strong></h3><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>LaTeX 代码</th>
+<th>中文音译</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$\alpha$</td>
+<td><code>\alpha</code></td>
+<td>阿尔法</td>
+</tr>
+<tr>
+<td>$\beta$</td>
+<td><code>\beta</code></td>
+<td>贝塔</td>
+</tr>
+<tr>
+<td>$\gamma$</td>
+<td><code>\gamma</code></td>
+<td>伽马</td>
+</tr>
+<tr>
+<td>$\delta$</td>
+<td><code>\delta</code></td>
+<td>德尔塔</td>
+</tr>
+<tr>
+<td>$\epsilon$</td>
+<td><code>\epsilon</code></td>
+<td>艾普西龙（普通 epsilon）</td>
+</tr>
+<tr>
+<td>$\varepsilon$</td>
+<td><code>\varepsilon</code></td>
+<td>伪艾普西龙（变体 epsilon）</td>
+</tr>
+<tr>
+<td>$\zeta$</td>
+<td><code>\zeta</code></td>
+<td>截塔</td>
+</tr>
+<tr>
+<td>$\eta$</td>
+<td><code>\eta</code></td>
+<td>伊塔</td>
+</tr>
+<tr>
+<td>$\theta$</td>
+<td><code>\theta</code></td>
+<td>西塔</td>
+</tr>
+<tr>
+<td>$\vartheta$</td>
+<td><code>\vartheta</code></td>
+<td>变体西塔</td>
+</tr>
+<tr>
+<td>$\iota$</td>
+<td><code>\iota</code></td>
+<td>约塔</td>
+</tr>
+<tr>
+<td>$\kappa$</td>
+<td><code>\kappa</code></td>
+<td>卡帕</td>
+</tr>
+<tr>
+<td>$\lambda$</td>
+<td><code>\lambda</code></td>
+<td>兰布达</td>
+</tr>
+<tr>
+<td>$\mu$</td>
+<td><code>\mu</code></td>
+<td>缪</td>
+</tr>
+<tr>
+<td>$\nu$</td>
+<td><code>\nu</code></td>
+<td>纽</td>
+</tr>
+<tr>
+<td>$\xi$</td>
+<td><code>\xi</code></td>
+<td>克西</td>
+</tr>
+<tr>
+<td>$\pi$</td>
+<td><code>\pi</code></td>
+<td>派（圆周率）</td>
+</tr>
+<tr>
+<td>$\varpi$</td>
+<td><code>\varpi</code></td>
+<td>变体派</td>
+</tr>
+<tr>
+<td>$\rho$</td>
+<td><code>\rho</code></td>
+<td>罗</td>
+</tr>
+<tr>
+<td>$\varrho$</td>
+<td><code>\varrho</code></td>
+<td>变体罗</td>
+</tr>
+<tr>
+<td>$\sigma$</td>
+<td><code>\sigma</code></td>
+<td>西格玛</td>
+</tr>
+<tr>
+<td>$\varsigma$</td>
+<td><code>\varsigma</code></td>
+<td>终结西格玛（变体 sigma）</td>
+</tr>
+<tr>
+<td>$\tau$</td>
+<td><code>\tau</code></td>
+<td>陶</td>
+</tr>
+<tr>
+<td>$\upsilon$</td>
+<td><code>\upsilon</code></td>
+<td>宇普西龙</td>
+</tr>
+<tr>
+<td>$\phi$</td>
+<td><code>\phi</code></td>
+<td>菲</td>
+</tr>
+<tr>
+<td>$\varphi$</td>
+<td><code>\varphi</code></td>
+<td>变体菲</td>
+</tr>
+<tr>
+<td>$\chi$</td>
+<td><code>\chi</code></td>
+<td>氚（发音接近“开”）</td>
+</tr>
+<tr>
+<td>$\psi$</td>
+<td><code>\psi</code></td>
+<td>普赛</td>
+</tr>
+<tr>
+<td>$\omega$</td>
+<td><code>\omega</code></td>
+<td>欧米伽</td>
+</tr>
+</tbody></table>
+<h3 id="3-2-大写希腊字母"><a href="#3-2-大写希腊字母" class="headerlink" title="3.2. 大写希腊字母"></a><strong>3.2. 大写希腊字母</strong></h3><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>LaTeX 代码</th>
+<th>中文音译</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$\Gamma$</td>
+<td><code>\Gamma</code></td>
+<td>伽马（大写）</td>
+</tr>
+<tr>
+<td>$\Delta$</td>
+<td><code>\Delta</code></td>
+<td>德尔塔（大写）</td>
+</tr>
+<tr>
+<td>$\Theta$</td>
+<td><code>\Theta</code></td>
+<td>西塔（大写）</td>
+</tr>
+<tr>
+<td>$\Lambda$</td>
+<td><code>\Lambda</code></td>
+<td>兰布达（大写）</td>
+</tr>
+<tr>
+<td>$\Xi$</td>
+<td><code>\Xi</code></td>
+<td>克西（大写）</td>
+</tr>
+<tr>
+<td>$\Pi$</td>
+<td><code>\Pi</code></td>
+<td>派（大写，数学常用于求和）</td>
+</tr>
+<tr>
+<td>$\Sigma$</td>
+<td><code>\Sigma</code></td>
+<td>西格玛（大写，数学常用于求和）</td>
+</tr>
+<tr>
+<td>$\Upsilon$</td>
+<td><code>\Upsilon</code></td>
+<td>宇普西龙（大写）</td>
+</tr>
+<tr>
+<td>$\Phi$</td>
+<td><code>\Phi</code></td>
+<td>菲（大写）</td>
+</tr>
+<tr>
+<td>$\Psi$</td>
+<td><code>\Psi</code></td>
+<td>普赛（大写）</td>
+</tr>
+<tr>
+<td>$\Omega$</td>
+<td><code>\Omega</code></td>
+<td>欧米伽（大写，数学物理常用）</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="➗-4-二元运算符"><a href="#➗-4-二元运算符" class="headerlink" title="➗ 4. 二元运算符"></a><strong>➗ 4. 二元运算符</strong></h2><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>LaTeX 代码</th>
+<th>中文说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$+$</td>
+<td><code>+</code></td>
+<td>加号</td>
+</tr>
+<tr>
+<td>$-$</td>
+<td><code>-</code></td>
+<td>减号</td>
+</tr>
+<tr>
+<td>$\times$</td>
+<td><code>\times</code></td>
+<td>乘号</td>
+</tr>
+<tr>
+<td>$\div$</td>
+<td><code>\div</code></td>
+<td>除号</td>
+</tr>
+<tr>
+<td>$\cdot$</td>
+<td><code>\cdot</code></td>
+<td>乘积点</td>
+</tr>
+<tr>
+<td>$\oplus$</td>
+<td><code>\oplus</code></td>
+<td>直和（用于向量空间、群论）</td>
+</tr>
+<tr>
+<td>$\ominus$</td>
+<td><code>\ominus</code></td>
+<td>直差</td>
+</tr>
+<tr>
+<td>$\otimes$</td>
+<td><code>\otimes</code></td>
+<td>直积</td>
+</tr>
+<tr>
+<td>$\oslash$</td>
+<td><code>\oslash</code></td>
+<td>直除</td>
+</tr>
+<tr>
+<td>$\odot$</td>
+<td><code>\odot</code></td>
+<td>圆点乘法</td>
+</tr>
+<tr>
+<td>$\star$</td>
+<td><code>\star</code></td>
+<td>星乘法</td>
+</tr>
+<tr>
+<td>$\circ$</td>
+<td><code>\circ</code></td>
+<td>复合映射</td>
+</tr>
+<tr>
+<td>$\bullet$</td>
+<td><code>\bullet</code></td>
+<td>实心点（乘法或列表符号）</td>
+</tr>
+<tr>
+<td>$\pm$</td>
+<td><code>\pm</code></td>
+<td>正负号</td>
+</tr>
+<tr>
+<td>$\mp$</td>
+<td><code>\mp</code></td>
+<td>负正号</td>
+</tr>
+<tr>
+<td>$\bigoplus$</td>
+<td><code>\bigoplus</code></td>
+<td>直和运算符（大运算符版本）</td>
+</tr>
+<tr>
+<td>$\bigotimes$</td>
+<td><code>\bigotimes</code></td>
+<td>直积运算符（大运算符版本）</td>
+</tr>
+<tr>
+<td>$\bigodot$</td>
+<td><code>\bigodot</code></td>
+<td>直乘运算符（大运算符版本）</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="⚖️-5-二元关系符"><a href="#⚖️-5-二元关系符" class="headerlink" title="⚖️ 5. 二元关系符"></a><strong>⚖️ 5. 二元关系符</strong></h2><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>LaTeX 代码</th>
+<th>中文说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$&#x3D;$</td>
+<td><code>=</code></td>
+<td>等于</td>
+</tr>
+<tr>
+<td>$\neq$</td>
+<td><code>\neq</code></td>
+<td>不等于</td>
+</tr>
+<tr>
+<td>$\approx$</td>
+<td><code>\approx</code></td>
+<td>约等于</td>
+</tr>
+<tr>
+<td>$\equiv$</td>
+<td><code>\equiv</code></td>
+<td>恒等于</td>
+</tr>
+<tr>
+<td>$&lt;$</td>
+<td><code>&lt;</code></td>
+<td>小于</td>
+</tr>
+<tr>
+<td>$&gt;$</td>
+<td><code>&gt;</code></td>
+<td>大于</td>
+</tr>
+<tr>
+<td>$\leq$</td>
+<td><code>\leq</code></td>
+<td>小于等于</td>
+</tr>
+<tr>
+<td>$\geq$</td>
+<td><code>\geq</code></td>
+<td>大于等于</td>
+</tr>
+<tr>
+<td>$\ll$</td>
+<td><code>\ll</code></td>
+<td>远小于</td>
+</tr>
+<tr>
+<td>$\gg$</td>
+<td><code>\gg</code></td>
+<td>远大于</td>
+</tr>
+<tr>
+<td>$\prec$</td>
+<td><code>\prec</code></td>
+<td>先于（偏序关系）</td>
+</tr>
+<tr>
+<td>$\succ$</td>
+<td><code>\succ</code></td>
+<td>后于（偏序关系）</td>
+</tr>
+<tr>
+<td>$\preceq$</td>
+<td><code>\preceq</code></td>
+<td>小于等于（偏序）</td>
+</tr>
+<tr>
+<td>$\succeq$</td>
+<td><code>\succeq</code></td>
+<td>大于等于（偏序）</td>
+</tr>
+<tr>
+<td>$\sim$</td>
+<td><code>\sim</code></td>
+<td>相似于</td>
+</tr>
+<tr>
+<td>$\nsim$</td>
+<td><code>\nsim</code></td>
+<td>不相似</td>
+</tr>
+<tr>
+<td>$\simeq$</td>
+<td><code>\simeq</code></td>
+<td>同构</td>
+</tr>
+<tr>
+<td>$\asymp$</td>
+<td><code>\asymp</code></td>
+<td>渐近等于</td>
+</tr>
+<tr>
+<td>$\propto$</td>
+<td><code>\propto</code></td>
+<td>成比例</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="🧠-6-逻辑符号"><a href="#🧠-6-逻辑符号" class="headerlink" title="🧠 6. 逻辑符号"></a><strong>🧠 6. 逻辑符号</strong></h2><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>LaTeX 代码</th>
+<th>中文说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$\wedge$</td>
+<td><code>\wedge</code></td>
+<td>逻辑与（合取）</td>
+</tr>
+<tr>
+<td>$\vee$</td>
+<td><code>\vee</code></td>
+<td>逻辑或（析取）</td>
+</tr>
+<tr>
+<td>$\neg$</td>
+<td><code>\neg</code></td>
+<td>逻辑非（否定）</td>
+</tr>
+<tr>
+<td>$\Rightarrow$</td>
+<td><code>\Rightarrow</code></td>
+<td>蕴含（如果…那么）</td>
+</tr>
+<tr>
+<td>$\Leftrightarrow$</td>
+<td><code>\Leftrightarrow</code></td>
+<td>当且仅当</td>
+</tr>
+<tr>
+<td>$\forall$</td>
+<td><code>\forall</code></td>
+<td>对所有</td>
+</tr>
+<tr>
+<td>$\exists$</td>
+<td><code>\exists</code></td>
+<td>存在</td>
+</tr>
+<tr>
+<td>$\nexists$</td>
+<td><code>\nexists</code></td>
+<td>不存在</td>
+</tr>
+<tr>
+<td>$\top$</td>
+<td><code>\top</code></td>
+<td>逻辑真</td>
+</tr>
+<tr>
+<td>$\bot$</td>
+<td><code>\bot</code></td>
+<td>逻辑假</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="📦-7-集合符号"><a href="#📦-7-集合符号" class="headerlink" title="📦 7. 集合符号"></a><strong>📦 7. 集合符号</strong></h2><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>LaTeX 代码</th>
+<th>中文说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$\emptyset$</td>
+<td><code>\emptyset</code></td>
+<td>空集</td>
+</tr>
+<tr>
+<td>$\in$</td>
+<td><code>\in</code></td>
+<td>属于</td>
+</tr>
+<tr>
+<td>$\notin$</td>
+<td><code>\notin</code></td>
+<td>不属于</td>
+</tr>
+<tr>
+<td>$\subseteq$</td>
+<td><code>\subseteq</code></td>
+<td>子集</td>
+</tr>
+<tr>
+<td>$\subset$</td>
+<td><code>\subset</code></td>
+<td>真子集</td>
+</tr>
+<tr>
+<td>$\nsubseteq$</td>
+<td><code>\nsubseteq</code></td>
+<td>不是子集</td>
+</tr>
+<tr>
+<td>$\supset$</td>
+<td><code>\supset</code></td>
+<td>包含</td>
+</tr>
+<tr>
+<td>$\supseteq$</td>
+<td><code>\supseteq</code></td>
+<td>超集</td>
+</tr>
+<tr>
+<td>$\nsupseteq$</td>
+<td><code>\nsupseteq</code></td>
+<td>不是超集</td>
+</tr>
+<tr>
+<td>$\cup$</td>
+<td><code>\cup</code></td>
+<td>并集</td>
+</tr>
+<tr>
+<td>$\cap$</td>
+<td><code>\cap</code></td>
+<td>交集</td>
+</tr>
+<tr>
+<td>$\setminus$</td>
+<td><code>\setminus</code></td>
+<td>差集</td>
+</tr>
+<tr>
+<td>$\bigcup$</td>
+<td><code>\bigcup</code></td>
+<td>大并集</td>
+</tr>
+<tr>
+<td>$\bigcap$</td>
+<td><code>\bigcap</code></td>
+<td>大交集</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="↔️-8-箭头符号"><a href="#↔️-8-箭头符号" class="headerlink" title="↔️ 8. 箭头符号"></a><strong>↔️ 8. 箭头符号</strong></h2><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>LaTeX 代码</th>
+<th>中文说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$\to$</td>
+<td><code>\to</code></td>
+<td>右箭头</td>
+</tr>
+<tr>
+<td>$\leftarrow$</td>
+<td><code>\leftarrow</code></td>
+<td>左箭头</td>
+</tr>
+<tr>
+<td>$\Rightarrow$</td>
+<td><code>\Rightarrow</code></td>
+<td>右蕴含箭头</td>
+</tr>
+<tr>
+<td>$\Leftarrow$</td>
+<td><code>\Leftarrow</code></td>
+<td>左蕴含箭头</td>
+</tr>
+<tr>
+<td>$\leftrightarrow$</td>
+<td><code>\leftrightarrow</code></td>
+<td>左右箭头</td>
+</tr>
+<tr>
+<td>$\Leftrightarrow$</td>
+<td><code>\Leftrightarrow</code></td>
+<td>双向蕴含箭头</td>
+</tr>
+<tr>
+<td>$\longrightarrow$</td>
+<td><code>\longrightarrow</code></td>
+<td>长右箭头</td>
+</tr>
+<tr>
+<td>$\longleftarrow$</td>
+<td><code>\longleftarrow</code></td>
+<td>长左箭头</td>
+</tr>
+<tr>
+<td>$\mapsto$</td>
+<td><code>\mapsto</code></td>
+<td>映射箭头</td>
+</tr>
+<tr>
+<td>$\longmapsto$</td>
+<td><code>\longmapsto</code></td>
+<td>长映射箭头</td>
+</tr>
+<tr>
+<td>$\uparrow$</td>
+<td><code>\uparrow</code></td>
+<td>向上箭头</td>
+</tr>
+<tr>
+<td>$\downarrow$</td>
+<td><code>\downarrow</code></td>
+<td>向下箭头</td>
+</tr>
+<tr>
+<td>$\updownarrow$</td>
+<td><code>\updownarrow</code></td>
+<td>上下箭头</td>
+</tr>
+<tr>
+<td>$\Uparrow$</td>
+<td><code>\Uparrow</code></td>
+<td>向上双箭头</td>
+</tr>
+<tr>
+<td>$\Downarrow$</td>
+<td><code>\Downarrow</code></td>
+<td>向下双箭头</td>
+</tr>
+<tr>
+<td>$\Updownarrow$</td>
+<td><code>\Updownarrow</code></td>
+<td>上下双箭头</td>
+</tr>
+</tbody></table>
+<h2 id="🔢-9-分数"><a href="#🔢-9-分数" class="headerlink" title="🔢 9. 分数"></a><strong>🔢 9. 分数</strong></h2><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>LaTeX 代码</th>
+<th>中文说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$\frac{a}{b}$</td>
+<td><code>\frac{a}{b}</code></td>
+<td>普通分数</td>
+</tr>
+<tr>
+<td>$\dfrac{a}{b}$</td>
+<td><code>\dfrac{a}{b}</code></td>
+<td>强制分数（适用于行内公式）</td>
+</tr>
+<tr>
+<td>$\tfrac{a}{b}$</td>
+<td><code>\tfrac{a}{b}</code></td>
+<td>小型分数（适用于较小的公式）</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="✔️-10-根式"><a href="#✔️-10-根式" class="headerlink" title="✔️ 10. 根式"></a><strong>✔️ 10. 根式</strong></h2><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>LaTeX 代码</th>
+<th>中文说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$\sqrt{x}$</td>
+<td><code>\sqrt{x}</code></td>
+<td>平方根</td>
+</tr>
+<tr>
+<td>$\sqrt[n]{x}$</td>
+<td><code>\sqrt[n]{x}</code></td>
+<td>n 次方根</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="📈-11-指数与对数"><a href="#📈-11-指数与对数" class="headerlink" title="📈 11. 指数与对数"></a><strong>📈 11. 指数与对数</strong></h2><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>LaTeX 代码</th>
+<th>中文说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$a^b$</td>
+<td><code>a^b</code></td>
+<td>指数</td>
+</tr>
+<tr>
+<td>$e^x$</td>
+<td><code>e^x</code></td>
+<td>自然指数</td>
+</tr>
+<tr>
+<td>$\log x$</td>
+<td><code>\log x</code></td>
+<td>对数（默认底数为10）</td>
+</tr>
+<tr>
+<td>$\ln x$</td>
+<td><code>\ln x</code></td>
+<td>自然对数（底数为 e）</td>
+</tr>
+<tr>
+<td>$\log_a b$</td>
+<td><code>\log_a b</code></td>
+<td>底数 a 的对数</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="📉-12-微分与导数"><a href="#📉-12-微分与导数" class="headerlink" title="📉 12. 微分与导数"></a><strong>📉 12. 微分与导数</strong></h2><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>LaTeX 代码</th>
+<th>中文说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$\frac{d}{dx} f(x)$</td>
+<td><code>\frac{d}{dx} f(x)</code></td>
+<td>一阶导数</td>
+</tr>
+<tr>
+<td>$\frac{d^2}{dx^2} f(x)$</td>
+<td><code>\frac{d^2}{dx^2} f(x)</code></td>
+<td>二阶导数</td>
+</tr>
+<tr>
+<td>$\frac{\partial f}{\partial x}$</td>
+<td><code>\frac{\partial f}{\partial x}</code></td>
+<td>偏导数</td>
+</tr>
+<tr>
+<td>$\nabla f$</td>
+<td><code>\nabla f</code></td>
+<td>梯度</td>
+</tr>
+<tr>
+<td>$\Delta f$</td>
+<td><code>\Delta f</code></td>
+<td>拉普拉斯算子</td>
+</tr>
+<tr>
+<td>$\dot{x}$</td>
+<td><code>\dot{x}</code></td>
+<td>一阶导数（牛顿记号）</td>
+</tr>
+<tr>
+<td>$\ddot{x}$</td>
+<td><code>\ddot{x}</code></td>
+<td>二阶导数（牛顿记号）</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="🔝-13-极限"><a href="#🔝-13-极限" class="headerlink" title="🔝 13. 极限"></a><strong>🔝 13. 极限</strong></h2><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>LaTeX 代码</th>
+<th>中文说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$\lim_{x \to a} f(x)$</td>
+<td><code>\lim_{x \to a} f(x)</code></td>
+<td>极限</td>
+</tr>
+<tr>
+<td>$\lim_{x \to \infty} f(x)$</td>
+<td><code>\lim_{x \to \infty} f(x)</code></td>
+<td>无穷极限</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="∫-14-积分"><a href="#∫-14-积分" class="headerlink" title="∫ 14. 积分"></a><strong>∫ 14. 积分</strong></h2><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>LaTeX 代码</th>
+<th>中文说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$\int f(x)dx$</td>
+<td><code>\int f(x)dx</code></td>
+<td>不定积分</td>
+</tr>
+<tr>
+<td>$\int_{a}^{b} f(x)dx$</td>
+<td><code>\int_{a}^{b} f(x)dx</code></td>
+<td>定积分</td>
+</tr>
+<tr>
+<td>$\iint f(x,y)dxdy$</td>
+<td><code>\iint f(x,y)dxdy</code></td>
+<td>二重积分</td>
+</tr>
+<tr>
+<td>$\iiint f(x,y,z)dxdydz$</td>
+<td><code>\iiint f(x,y,z)dxdydz</code></td>
+<td>三重积分</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="✍️-15-矩阵"><a href="#✍️-15-矩阵" class="headerlink" title="✍️ 15. 矩阵"></a><strong>✍️ 15. 矩阵</strong></h2><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>LaTeX 代码</th>
+<th>中文说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$\begin{bmatrix} a &amp; b \ c &amp; d \end{bmatrix}$</td>
+<td><code>\begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix}</code></td>
+<td>方括号矩阵</td>
+</tr>
+<tr>
+<td>$\begin{pmatrix} a &amp; b \ c &amp; d \end{pmatrix}$</td>
+<td><code>\begin{pmatrix} a &amp; b \\ c &amp; d \end{pmatrix}</code></td>
+<td>圆括号矩阵</td>
+</tr>
+<tr>
+<td>$\begin{vmatrix} a &amp; b \ c &amp; d \end{vmatrix}$</td>
+<td><code>\begin{vmatrix} a &amp; b \\ c &amp; d \end{vmatrix}</code></td>
+<td>行列式</td>
+</tr>
+<tr>
+<td>$\begin{Vmatrix} a &amp; b \ c &amp; d \end{Vmatrix}$</td>
+<td><code>\begin{Vmatrix} a &amp; b \\ c &amp; d \end{Vmatrix}</code></td>
+<td>双竖线矩阵</td>
+</tr>
+<tr>
+<td>$\begin{matrix} a &amp; b \ c &amp; d \end{matrix}$</td>
+<td><code>\begin{matrix} a &amp; b \\ c &amp; d \end{matrix}</code></td>
+<td>无括号矩阵</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="➡️-16-向量"><a href="#➡️-16-向量" class="headerlink" title="➡️ 16. 向量"></a>➡️ 16. <strong>向量</strong></h2><h3 id="16-1-向量的加粗表示"><a href="#16-1-向量的加粗表示" class="headerlink" title="16.1 向量的加粗表示"></a><strong>16.1 向量的加粗表示</strong></h3><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>LaTeX 代码</th>
+<th>中文说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$\mathbf{v}$</td>
+<td><code>\mathbf{v}</code></td>
+<td>向量，适用于字母</td>
+</tr>
+<tr>
+<td>$\mathbf{v}$</td>
+<td><code>\bm{v}</code></td>
+<td>加粗向量（适用于所有数学符号，需 <code>\usepackage{bm}</code>）</td>
+</tr>
+<tr>
+<td>$\boldsymbol{\alpha}$</td>
+<td><code>\boldsymbol{\alpha}</code></td>
+<td>加粗希腊字母（适用于 <code>\alpha, \beta</code> 等）</td>
+</tr>
+</tbody></table>
+<h3 id="16-2-向量的箭头表示"><a href="#16-2-向量的箭头表示" class="headerlink" title="16.2. 向量的箭头表示"></a><strong>16.2. 向量的箭头表示</strong></h3><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>LaTeX 代码</th>
+<th>中文说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$\vec{v}$</td>
+<td><code>\vec{v}</code></td>
+<td>向量符号，表示带箭头的向量</td>
+</tr>
+<tr>
+<td>$\overrightarrow{AB}$</td>
+<td><code>\overrightarrow{AB}</code></td>
+<td>表示从 A 指向 B 的向量</td>
+</tr>
+<tr>
+<td>$\overleftarrow{AB}$</td>
+<td><code>\overleftarrow{AB}</code></td>
+<td>表示从 B 指向 A 的向量</td>
+</tr>
+</tbody></table>
+<h3 id="16-3-单位向量"><a href="#16-3-单位向量" class="headerlink" title="16.3 单位向量"></a><strong>16.3 单位向量</strong></h3><p>单位向量表示方向向量，通常用 <strong>加帽符号</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>LaTeX 代码</th>
+<th>中文说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$\hat{v}$</td>
+<td><code>\hat{v}</code></td>
+<td>单位向量</td>
+</tr>
+<tr>
+<td>$\hat{i}, \hat{j}, \hat{k}$</td>
+<td><code>\hat{i}, \hat{j}, \hat{k}</code></td>
+<td>直角坐标系中的标准基向量</td>
+</tr>
+</tbody></table>
+<h3 id="16-4-向量的点积与叉积"><a href="#16-4-向量的点积与叉积" class="headerlink" title="16.4 向量的点积与叉积"></a><strong>16.4 向量的点积与叉积</strong></h3><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>LaTeX 代码</th>
+<th>中文说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$\mathbf{a} \cdot \mathbf{b}$</td>
+<td><code>\mathbf{a} \cdot \mathbf{b}</code></td>
+<td>向量的点积</td>
+</tr>
+<tr>
+<td>$\mathbf{a} \times \mathbf{b}$</td>
+<td><code>\mathbf{a} \times \mathbf{b}</code></td>
+<td>向量的叉积</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="🔄-17-方程与方程组"><a href="#🔄-17-方程与方程组" class="headerlink" title="🔄 17. 方程与方程组"></a>🔄 <strong>17. 方程与方程组</strong></h2><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>LaTeX 代码</th>
+<th>中文说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$\begin{align} x + y &amp;&#x3D; 2 \ x - y &amp;&#x3D; 0 \end{align}$</td>
+<td><code>\begin{align} x + y &amp;= 2 \\ x - y &amp;= 0 \end{align}</code></td>
+<td>对齐的方程组</td>
+</tr>
+<tr>
+<td>$\begin{cases} ax + by &#x3D; c \ dx + ey &#x3D; f \end{cases}$</td>
+<td><code>\begin{cases} ax + by = c \\ dx + ey = f \end{cases}</code></td>
+<td>分段定义或方程组</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="✏️-18-空格与换行"><a href="#✏️-18-空格与换行" class="headerlink" title="✏️ 18. 空格与换行"></a>✏️ <strong>18. 空格与换行</strong></h2><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>LaTeX 代码</th>
+<th>中文说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$a\ b$</td>
+<td><code>a\ b</code></td>
+<td>小空格</td>
+</tr>
+<tr>
+<td>$a\quad b$</td>
+<td><code>a\quad b</code></td>
+<td>大空格</td>
+</tr>
+<tr>
+<td>$a\qquad b$</td>
+<td><code>a\qquad b</code></td>
+<td>超大空格</td>
+</tr>
+<tr>
+<td>$a\ b$</td>
+<td><code>a\\ b</code></td>
+<td>换行</td>
+</tr>
+<tr>
+<td>$a,b$</td>
+<td><code>a\,b</code></td>
+<td>细小空格</td>
+</tr>
+<tr>
+<td>$a!b$</td>
+<td><code>a\!b</code></td>
+<td>负空格（缩小间距）</td>
+</tr>
+<tr>
+<td>$\text{This is a~test.}$</td>
+<td><code>\text{This is a~test.}</code></td>
+<td>硬空格</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="🎨-19-颜色"><a href="#🎨-19-颜色" class="headerlink" title="🎨 19. 颜色"></a>🎨 <strong>19. 颜色</strong></h2><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>LaTeX 代码</th>
+<th>中文说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$\textcolor{red}{text}$</td>
+<td><code>\textcolor{red}{text}</code></td>
+<td>颜色（红色）</td>
+</tr>
+<tr>
+<td>$\textcolor{blue}{text}$</td>
+<td><code>\textcolor{blue}{text}</code></td>
+<td>颜色（蓝色）</td>
+</tr>
+<tr>
+<td>$\color{green}text$</td>
+<td><code>\color{green}text</code></td>
+<td>颜色（绿色）</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="🖍️-20-字体"><a href="#🖍️-20-字体" class="headerlink" title="🖍️ 20. 字体"></a>🖍️ <strong>20. 字体</strong></h2><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>LaTeX 代码</th>
+<th>中文说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$\mathbf{x}$</td>
+<td><code>\mathbf{x}</code></td>
+<td>加粗</td>
+</tr>
+<tr>
+<td>$\mathit{x}$</td>
+<td><code>\mathit{x}</code></td>
+<td>斜体</td>
+</tr>
+<tr>
+<td>$\mathcal{L}$</td>
+<td><code>\mathcal{L}</code></td>
+<td>手写体</td>
+</tr>
+<tr>
+<td>$\mathbb{R}$</td>
+<td><code>\mathbb{R}</code></td>
+<td>黑板体（常用于数集）</td>
+</tr>
+<tr>
+<td>$\mathrm{x}$</td>
+<td><code>\mathrm{x}</code></td>
+<td>直立体</td>
+</tr>
+<tr>
+<td>$\mathtt{x}$</td>
+<td><code>\mathtt{x}</code></td>
+<td>打字机字体</td>
+</tr>
+<tr>
+<td>$\mathscr{L}$</td>
+<td><code>\mathscr{L}</code></td>
+<td>花体（数学符号）</td>
+</tr>
+</tbody></table>
+<hr>
+<h1 id="💎完整示例"><a href="#💎完整示例" class="headerlink" title="💎完整示例"></a>💎<strong>完整示例</strong></h1><h2 id="🌊-1-线性代数"><a href="#🌊-1-线性代数" class="headerlink" title="🌊 1. 线性代数"></a><strong>🌊 1. 线性代数</strong></h2><h3 id="1-1-矩阵乘法"><a href="#1-1-矩阵乘法" class="headerlink" title="1.1 矩阵乘法"></a><strong>1.1 矩阵乘法</strong></h3><p>给定两个矩阵 $A \in \mathbb{R}^{m \times n}$ 和 $B \in \mathbb{R}^{n \times p}$，它们的<strong>矩阵乘法</strong>定义如下：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br><span class="line">C = AB, <span class="keyword">\quad</span> C<span class="built_in">_</span>&#123;ij&#125; = <span class="keyword">\sum</span><span class="built_in">_</span>&#123;k=1&#125;<span class="built_in">^</span>&#123;n&#125; A<span class="built_in">_</span>&#123;ik&#125; B<span class="built_in">_</span>&#123;kj&#125;, <span class="keyword">\quad</span> C <span class="keyword">\in</span> <span class="keyword">\mathbb</span>&#123;R&#125;<span class="built_in">^</span>&#123;m <span class="keyword">\times</span> p&#125;</span><br><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br></pre></td></tr></table></figure>
+
+<p>$$<br>C &#x3D; AB, \quad C_{ij} &#x3D; \sum_{k&#x3D;1}^{n} A_{ik} B_{kj}, \quad C \in \mathbb{R}^{m \times p}<br>$$</p>
+<p><strong>说明</strong>：矩阵 $C$ 的元素 $C_{ij}$ 由矩阵 $A$ 的第 $i$ 行与矩阵 $B$ 的第 $j$ 列按<strong>对应元素相乘后求和</strong>得到。</p>
+<hr>
+<h3 id="1-2-特征值与特征向量"><a href="#1-2-特征值与特征向量" class="headerlink" title="1.2 特征值与特征向量"></a><strong>1.2 特征值与特征向量</strong></h3><p>对于方阵 $A \in \mathbb{R}^{n \times n}$，如果存在非零向量 $\bm{v}$ 和标量 $\lambda$ 使得：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br><span class="line">A<span class="keyword">\mathbf</span>&#123;v&#125; = <span class="keyword">\lambda</span> <span class="keyword">\mathbf</span>&#123;v&#125;</span><br><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>则称 $\lambda$ 为矩阵 $A$ 的<strong>特征值</strong>，$\mathbf{v}$ 为对应的<strong>特征向量</strong>。</p>
+<p>$$<br>A\mathbf{v} &#x3D; \lambda \mathbf{v}<br>$$</p>
+<p><strong>说明</strong>：当矩阵 $A$ 作用于向量 $\mathbf{v}$ 上时，$\mathbf{v}$ 仅仅被缩放（即乘以特征值 $\lambda$），方向不变。</p>
+<hr>
+<h3 id="1-3-奇异值分解（SVD）"><a href="#1-3-奇异值分解（SVD）" class="headerlink" title="1.3 奇异值分解（SVD）"></a><strong>1.3 奇异值分解（SVD）</strong></h3><p>任意矩阵 $A \in \mathbb{R}^{m \times n}$ 可分解为：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br><span class="line">A = U <span class="keyword">\Sigma</span> V<span class="built_in">^</span>T</span><br><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br></pre></td></tr></table></figure>
+
+<p>其中：</p>
+<ul>
+<li>$U \in \mathbb{R}^{m \times m}$ 是正交矩阵，</li>
+<li>$V \in \mathbb{R}^{n \times n}$ 是正交矩阵，</li>
+<li>$\Sigma$ 是对角矩阵，包含奇异值 $\sigma_i$。</li>
+</ul>
+<p>$$<br>A &#x3D; U \Sigma V^T<br>$$</p>
+<p><strong>说明</strong>：奇异值分解（SVD）是一种强大的矩阵分解方法，广泛用于<strong>降维、压缩、信号处理等</strong>。</p>
+<hr>
+<h2 id="🎲-2-概率统计"><a href="#🎲-2-概率统计" class="headerlink" title="🎲 2. 概率统计"></a><strong>🎲 2. 概率统计</strong></h2><h3 id="2-1-贝叶斯定理"><a href="#2-1-贝叶斯定理" class="headerlink" title="2.1 贝叶斯定理"></a><strong>2.1 贝叶斯定理</strong></h3><p>对于事件 $A$ 和 $B$，如果 $P(B) &gt; 0$，则贝叶斯定理表示为：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br><span class="line">P(A <span class="keyword">\mid</span> B) = <span class="keyword">\frac</span>&#123;P(B <span class="keyword">\mid</span> A) P(A)&#125;&#123;P(B)&#125;</span><br><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br></pre></td></tr></table></figure>
+
+<p>$$<br>P(A \mid B) &#x3D; \frac{P(B \mid A) P(A)}{P(B)}<br>$$</p>
+<p><strong>说明</strong>：贝叶斯定理是概率论中最重要的公式之一，广泛用于<strong>机器学习、医学诊断、自然语言处理等</strong>领域。</p>
+<hr>
+<h3 id="2-2-期望与方差"><a href="#2-2-期望与方差" class="headerlink" title="2.2 期望与方差"></a><strong>2.2 期望与方差</strong></h3><h4 id="2-2-1-期望"><a href="#2-2-1-期望" class="headerlink" title="2.2.1 期望"></a><strong>2.2.1 期望</strong></h4><p>设随机变量 $X$ 服从概率分布 $P(X)$，则：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br><span class="line"><span class="keyword">\mathbb</span>&#123;E&#125;[X] = <span class="keyword">\sum</span><span class="built_in">_</span>&#123;x&#125; x P(X = x)</span><br><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br></pre></td></tr></table></figure>
+
+<p>$$<br>\mathbb{E}[X] &#x3D; \sum_{x} x P(X &#x3D; x)<br>$$</p>
+<p><strong>说明</strong>：数学期望表示随机变量 $X$ 的<strong>加权平均值</strong>，即它的<strong>平均趋势</strong>。</p>
+<h4 id="2-2-2-方差"><a href="#2-2-2-方差" class="headerlink" title="2.2.2 方差"></a><strong>2.2.2 方差</strong></h4><p>随机变量 $X$ 的方差定义为：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br><span class="line"><span class="keyword">\mathrm</span>&#123;Var&#125;(X) = <span class="keyword">\mathbb</span>&#123;E&#125;[(X - <span class="keyword">\mathbb</span>&#123;E&#125;[X])<span class="built_in">^</span>2]</span><br><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br></pre></td></tr></table></figure>
+
+<p>$$<br>\mathrm{Var}(X) &#x3D; \mathbb{E}[(X - \mathbb{E}[X])^2]<br>$$</p>
+<p><strong>说明</strong>：方差度量了随机变量 $X$ <strong>偏离均值的程度</strong>，方差越大，数据的离散性越强。</p>
+<hr>
+<h3 id="2-3-高斯分布（正态分布）"><a href="#2-3-高斯分布（正态分布）" class="headerlink" title="2.3 高斯分布（正态分布）"></a><strong>2.3 高斯分布（正态分布）</strong></h3><p>随机变量 $X$ 服从均值 $\mu$，方差 $\sigma^2$ 的高斯分布（正态分布），其概率密度函数（PDF）为：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br><span class="line">p(x) = <span class="keyword">\frac</span>&#123;1&#125;&#123;<span class="keyword">\sqrt</span>&#123;2 <span class="keyword">\pi</span> <span class="keyword">\sigma</span><span class="built_in">^</span>2&#125;&#125; <span class="keyword">\exp</span> <span class="keyword">\left</span>(-<span class="keyword">\frac</span>&#123;(x - <span class="keyword">\mu</span>)<span class="built_in">^</span>2&#125;&#123;2<span class="keyword">\sigma</span><span class="built_in">^</span>2&#125; <span class="keyword">\right</span>)</span><br><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br></pre></td></tr></table></figure>
+
+<p>$$<br>p(x) &#x3D; \frac{1}{\sqrt{2 \pi \sigma^2}} \exp \left(-\frac{(x - \mu)^2}{2\sigma^2} \right)<br>$$</p>
+<p><strong>说明</strong>：高斯分布是<strong>最重要的概率分布</strong>之一，在<strong>自然科学、工程、机器学习等领域</strong>中应用广泛。</p>
+<hr>
+<h2 id="🤖-3-机器学习"><a href="#🤖-3-机器学习" class="headerlink" title="🤖 3. 机器学习"></a><strong>🤖 3. 机器学习</strong></h2><h3 id="3-1-线性回归模型"><a href="#3-1-线性回归模型" class="headerlink" title="3.1 线性回归模型"></a><strong>3.1 线性回归模型</strong></h3><p>在<strong>线性回归模型</strong>中，如果试图找到一个线性函数来拟合数据点 $(x_i, y_i)$，那么数学表达式如下：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br><span class="line">y = w<span class="built_in">^</span>T x + b</span><br><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br></pre></td></tr></table></figure>
+
+<p>$$<br>y &#x3D; w^T x + b<br>$$</p>
+<p>使用最小二乘法（OLS）来估计参数 $w$，会用到最小化<strong>均方误差（MSE）</strong>：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br><span class="line">L(w, b) = <span class="keyword">\frac</span>&#123;1&#125;&#123;N&#125; <span class="keyword">\sum</span><span class="built_in">_</span>&#123;i=1&#125;<span class="built_in">^</span>&#123;N&#125; (y<span class="built_in">_</span>i - (w<span class="built_in">^</span>T x<span class="built_in">_</span>i + b))<span class="built_in">^</span>2</span><br><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br></pre></td></tr></table></figure>
+
+<p>$$<br>L(w, b) &#x3D; \frac{1}{N} \sum_{i&#x3D;1}^{N} (y_i - (w^T x_i + b))^2<br>$$</p>
+<p><strong>说明</strong>：线性回归是<strong>机器学习最基础的回归模型</strong>，在<strong>统计建模、预测分析</strong>等领域广泛应用。</p>
+<hr>
+<h3 id="3-2-Kullback-Leibler-KL-散度"><a href="#3-2-Kullback-Leibler-KL-散度" class="headerlink" title="3.2 Kullback-Leibler (KL) 散度"></a><strong>3.2 Kullback-Leibler (KL) 散度</strong></h3><p>KL 散度用于衡量两个概率分布 $P(x)$ 和 $Q(x)$ 之间的差异，定义如下：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br><span class="line">D<span class="built_in">_</span>&#123;KL&#125;(P <span class="keyword">\parallel</span> Q) = <span class="keyword">\sum</span><span class="built_in">_</span>x P(x) <span class="keyword">\log</span> <span class="keyword">\frac</span>&#123;P(x)&#125;&#123;Q(x)&#125;</span><br><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br></pre></td></tr></table></figure>
+
+<p>$$<br>D_{KL}(P \parallel Q) &#x3D; \sum_x P(x) \log \frac{P(x)}{Q(x)}<br>$$</p>
+<p>或者对于连续概率分布：</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br><span class="line">D<span class="built_in">_</span>&#123;KL&#125;(P <span class="keyword">\parallel</span> Q) = <span class="keyword">\int</span> P(x) <span class="keyword">\log</span> <span class="keyword">\frac</span>&#123;P(x)&#125;&#123;Q(x)&#125; dx</span><br><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br></pre></td></tr></table></figure>
+
+<p>$$<br>D_{KL}(P \parallel Q) &#x3D; \int P(x) \log \frac{P(x)}{Q(x)} dx<br>$$</p>
+<p><strong>说明</strong>：KL 散度用于衡量两个概率分布之间的<strong>相对熵</strong>，在<strong>信息论、概率统计、机器学习</strong>等领域中应用广泛。</p>
+
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/">数学公式</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2025/09/03/%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F/"
+                                   title="存储系统"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">存储系统</span>
+                                        <span class="post-nav-item">Prev posts</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2025/03/28/Java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"
+                                   title="JAVA网络编程"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">JAVA网络编程</span>
+                                        <span class="post-nav-item">Next posts</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%F0%9F%93%98-LaTeX-%E8%AF%AD%E6%B3%95"><span class="nav-text">📘 LaTeX 语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%90-1-LaTeX-%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%BC%8F"><span class="nav-text">📐 1. LaTeX 数学模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E8%A1%8C%E5%86%85%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%BC%8F"><span class="nav-text">1.1. 行内数学模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E7%8B%AC%E7%AB%8B%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%BC%8F"><span class="nav-text">1.2. 独立数学模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E5%B8%A6%E7%BC%96%E5%8F%B7%E5%85%AC%E5%BC%8F"><span class="nav-text">1.3. 带编号公式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%A3-2-%E4%BF%9D%E7%95%99%E5%AD%97%E7%AC%A6"><span class="nav-text">🔣 2. 保留字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%A0-3-%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D"><span class="nav-text">🔠 3. 希腊字母</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E5%B0%8F%E5%86%99%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D"><span class="nav-text">3.1. 小写希腊字母</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E5%A4%A7%E5%86%99%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D"><span class="nav-text">3.2. 大写希腊字母</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9E%97-4-%E4%BA%8C%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-text">➗ 4. 二元运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9A%96%EF%B8%8F-5-%E4%BA%8C%E5%85%83%E5%85%B3%E7%B3%BB%E7%AC%A6"><span class="nav-text">⚖️ 5. 二元关系符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%A7%A0-6-%E9%80%BB%E8%BE%91%E7%AC%A6%E5%8F%B7"><span class="nav-text">🧠 6. 逻辑符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%A6-7-%E9%9B%86%E5%90%88%E7%AC%A6%E5%8F%B7"><span class="nav-text">📦 7. 集合符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%86%94%EF%B8%8F-8-%E7%AE%AD%E5%A4%B4%E7%AC%A6%E5%8F%B7"><span class="nav-text">↔️ 8. 箭头符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%A2-9-%E5%88%86%E6%95%B0"><span class="nav-text">🔢 9. 分数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9C%94%EF%B8%8F-10-%E6%A0%B9%E5%BC%8F"><span class="nav-text">✔️ 10. 根式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%88-11-%E6%8C%87%E6%95%B0%E4%B8%8E%E5%AF%B9%E6%95%B0"><span class="nav-text">📈 11. 指数与对数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%89-12-%E5%BE%AE%E5%88%86%E4%B8%8E%E5%AF%BC%E6%95%B0"><span class="nav-text">📉 12. 微分与导数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%9D-13-%E6%9E%81%E9%99%90"><span class="nav-text">🔝 13. 极限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%88%AB-14-%E7%A7%AF%E5%88%86"><span class="nav-text">∫ 14. 积分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9C%8D%EF%B8%8F-15-%E7%9F%A9%E9%98%B5"><span class="nav-text">✍️ 15. 矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9E%A1%EF%B8%8F-16-%E5%90%91%E9%87%8F"><span class="nav-text">➡️ 16. 向量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#16-1-%E5%90%91%E9%87%8F%E7%9A%84%E5%8A%A0%E7%B2%97%E8%A1%A8%E7%A4%BA"><span class="nav-text">16.1 向量的加粗表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-2-%E5%90%91%E9%87%8F%E7%9A%84%E7%AE%AD%E5%A4%B4%E8%A1%A8%E7%A4%BA"><span class="nav-text">16.2. 向量的箭头表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-3-%E5%8D%95%E4%BD%8D%E5%90%91%E9%87%8F"><span class="nav-text">16.3 单位向量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-4-%E5%90%91%E9%87%8F%E7%9A%84%E7%82%B9%E7%A7%AF%E4%B8%8E%E5%8F%89%E7%A7%AF"><span class="nav-text">16.4 向量的点积与叉积</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%84-17-%E6%96%B9%E7%A8%8B%E4%B8%8E%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="nav-text">🔄 17. 方程与方程组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9C%8F%EF%B8%8F-18-%E7%A9%BA%E6%A0%BC%E4%B8%8E%E6%8D%A2%E8%A1%8C"><span class="nav-text">✏️ 18. 空格与换行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%A8-19-%E9%A2%9C%E8%89%B2"><span class="nav-text">🎨 19. 颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%96%8D%EF%B8%8F-20-%E5%AD%97%E4%BD%93"><span class="nav-text">🖍️ 20. 字体</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%F0%9F%92%8E%E5%AE%8C%E6%95%B4%E7%A4%BA%E4%BE%8B"><span class="nav-text">💎完整示例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8C%8A-1-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0"><span class="nav-text">🌊 1. 线性代数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95"><span class="nav-text">1.1 矩阵乘法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F"><span class="nav-text">1.2 特征值与特征向量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3%EF%BC%88SVD%EF%BC%89"><span class="nav-text">1.3 奇异值分解（SVD）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%B2-2-%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1"><span class="nav-text">🎲 2. 概率统计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86"><span class="nav-text">2.1 贝叶斯定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E6%9C%9F%E6%9C%9B%E4%B8%8E%E6%96%B9%E5%B7%AE"><span class="nav-text">2.2 期望与方差</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-%E6%9C%9F%E6%9C%9B"><span class="nav-text">2.2.1 期望</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-%E6%96%B9%E5%B7%AE"><span class="nav-text">2.2.2 方差</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E9%AB%98%E6%96%AF%E5%88%86%E5%B8%83%EF%BC%88%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%EF%BC%89"><span class="nav-text">2.3 高斯分布（正态分布）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%A4%96-3-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="nav-text">🤖 3. 机器学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B"><span class="nav-text">3.1 线性回归模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-Kullback-Leibler-KL-%E6%95%A3%E5%BA%A6"><span class="nav-text">3.2 Kullback-Leibler (KL) 散度</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+    &copy;&nbsp;<span>2024</span>&nbsp;-&nbsp;2026
+    
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Ebo</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+    </div>
+
+    
+
+    
+        <div class="count-info info-item">
+            
+
+            
+
+            
+                <span class="count-item border-box pv">
+                    <span class="item-type border-box">Page View</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%F0%9F%93%98-LaTeX-%E8%AF%AD%E6%B3%95"><span class="nav-text">📘 LaTeX 语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%90-1-LaTeX-%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%BC%8F"><span class="nav-text">📐 1. LaTeX 数学模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E8%A1%8C%E5%86%85%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%BC%8F"><span class="nav-text">1.1. 行内数学模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E7%8B%AC%E7%AB%8B%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%BC%8F"><span class="nav-text">1.2. 独立数学模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E5%B8%A6%E7%BC%96%E5%8F%B7%E5%85%AC%E5%BC%8F"><span class="nav-text">1.3. 带编号公式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%A3-2-%E4%BF%9D%E7%95%99%E5%AD%97%E7%AC%A6"><span class="nav-text">🔣 2. 保留字符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%A0-3-%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D"><span class="nav-text">🔠 3. 希腊字母</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E5%B0%8F%E5%86%99%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D"><span class="nav-text">3.1. 小写希腊字母</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E5%A4%A7%E5%86%99%E5%B8%8C%E8%85%8A%E5%AD%97%E6%AF%8D"><span class="nav-text">3.2. 大写希腊字母</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9E%97-4-%E4%BA%8C%E5%85%83%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="nav-text">➗ 4. 二元运算符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9A%96%EF%B8%8F-5-%E4%BA%8C%E5%85%83%E5%85%B3%E7%B3%BB%E7%AC%A6"><span class="nav-text">⚖️ 5. 二元关系符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%A7%A0-6-%E9%80%BB%E8%BE%91%E7%AC%A6%E5%8F%B7"><span class="nav-text">🧠 6. 逻辑符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%A6-7-%E9%9B%86%E5%90%88%E7%AC%A6%E5%8F%B7"><span class="nav-text">📦 7. 集合符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%86%94%EF%B8%8F-8-%E7%AE%AD%E5%A4%B4%E7%AC%A6%E5%8F%B7"><span class="nav-text">↔️ 8. 箭头符号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%A2-9-%E5%88%86%E6%95%B0"><span class="nav-text">🔢 9. 分数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9C%94%EF%B8%8F-10-%E6%A0%B9%E5%BC%8F"><span class="nav-text">✔️ 10. 根式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%88-11-%E6%8C%87%E6%95%B0%E4%B8%8E%E5%AF%B9%E6%95%B0"><span class="nav-text">📈 11. 指数与对数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%89-12-%E5%BE%AE%E5%88%86%E4%B8%8E%E5%AF%BC%E6%95%B0"><span class="nav-text">📉 12. 微分与导数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%9D-13-%E6%9E%81%E9%99%90"><span class="nav-text">🔝 13. 极限</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%88%AB-14-%E7%A7%AF%E5%88%86"><span class="nav-text">∫ 14. 积分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9C%8D%EF%B8%8F-15-%E7%9F%A9%E9%98%B5"><span class="nav-text">✍️ 15. 矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9E%A1%EF%B8%8F-16-%E5%90%91%E9%87%8F"><span class="nav-text">➡️ 16. 向量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#16-1-%E5%90%91%E9%87%8F%E7%9A%84%E5%8A%A0%E7%B2%97%E8%A1%A8%E7%A4%BA"><span class="nav-text">16.1 向量的加粗表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-2-%E5%90%91%E9%87%8F%E7%9A%84%E7%AE%AD%E5%A4%B4%E8%A1%A8%E7%A4%BA"><span class="nav-text">16.2. 向量的箭头表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-3-%E5%8D%95%E4%BD%8D%E5%90%91%E9%87%8F"><span class="nav-text">16.3 单位向量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-4-%E5%90%91%E9%87%8F%E7%9A%84%E7%82%B9%E7%A7%AF%E4%B8%8E%E5%8F%89%E7%A7%AF"><span class="nav-text">16.4 向量的点积与叉积</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%84-17-%E6%96%B9%E7%A8%8B%E4%B8%8E%E6%96%B9%E7%A8%8B%E7%BB%84"><span class="nav-text">🔄 17. 方程与方程组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9C%8F%EF%B8%8F-18-%E7%A9%BA%E6%A0%BC%E4%B8%8E%E6%8D%A2%E8%A1%8C"><span class="nav-text">✏️ 18. 空格与换行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%A8-19-%E9%A2%9C%E8%89%B2"><span class="nav-text">🎨 19. 颜色</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%96%8D%EF%B8%8F-20-%E5%AD%97%E4%BD%93"><span class="nav-text">🖍️ 20. 字体</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%F0%9F%92%8E%E5%AE%8C%E6%95%B4%E7%A4%BA%E4%BE%8B"><span class="nav-text">💎完整示例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8C%8A-1-%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0"><span class="nav-text">🌊 1. 线性代数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95"><span class="nav-text">1.1 矩阵乘法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E7%89%B9%E5%BE%81%E5%80%BC%E4%B8%8E%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F"><span class="nav-text">1.2 特征值与特征向量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E5%A5%87%E5%BC%82%E5%80%BC%E5%88%86%E8%A7%A3%EF%BC%88SVD%EF%BC%89"><span class="nav-text">1.3 奇异值分解（SVD）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%B2-2-%E6%A6%82%E7%8E%87%E7%BB%9F%E8%AE%A1"><span class="nav-text">🎲 2. 概率统计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86"><span class="nav-text">2.1 贝叶斯定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E6%9C%9F%E6%9C%9B%E4%B8%8E%E6%96%B9%E5%B7%AE"><span class="nav-text">2.2 期望与方差</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-%E6%9C%9F%E6%9C%9B"><span class="nav-text">2.2.1 期望</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-%E6%96%B9%E5%B7%AE"><span class="nav-text">2.2.2 方差</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E9%AB%98%E6%96%AF%E5%88%86%E5%B8%83%EF%BC%88%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83%EF%BC%89"><span class="nav-text">2.3 高斯分布（正态分布）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%A4%96-3-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="nav-text">🤖 3. 机器学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B"><span class="nav-text">3.1 线性回归模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-Kullback-Leibler-KL-%E6%95%A3%E5%BA%A6"><span class="nav-text">3.2 Kullback-Leibler (KL) 散度</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local search -->
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+<!-- lazyload -->
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>

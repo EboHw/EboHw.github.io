@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Ebo">
+    
+    <title>
+        
+            逻辑回归 |
+        
+        Ebo&#39; Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"ebohw.github.io","root":"/","language":"en","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"Ebo' Blog","author":"Ebo","avatar":"/images/avatar.svg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives","tags":"/tags","categories":"/categories","links":"/links"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/dark_bg.svg","description":"Keep Coding, Keep Thinking.","hitokoto":false},"social_contact":{"enable":true,"links":{"github":"https://github.com/EboHw","weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":"ranqixxsss@gmail.com"}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":true,"tag":true,"post_datetime":"updated"},"post":{"author_badge":{"enable":false,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":false,"site_pv":true,"page_pv":true}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":true},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2024,"word_count":false,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{},"version":"4.2.5"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               Ebo&#39; Blog
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                HOME
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/archives">
+                                
+                                ARCHIVES
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/tags">
+                                
+                                TAGS
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/categories">
+                                
+                                CATEGORIES
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/links">
+                                
+                                LINKS
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="menu-text-color fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                            HOME
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
+                            
+                            ARCHIVES
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/tags">
+                            
+                            TAGS
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/categories">
+                            
+                            CATEGORIES
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/links">
+                            
+                            LINKS
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        逻辑回归
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.svg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">Ebo</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2025-03-09 00:00:00</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                    <span class="datetime" data-updated="Wed Dec 17 2025 16:58:30 GMT+0800">2025-12-17 16:58:30</span>
+                </span>
+            
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%BA%93/">库</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%85%AC%E5%BC%8F/">公式</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body ">
+                    
+
+                    
+                         <h2 id="分类任务"><a href="#分类任务" class="headerlink" title="分类任务"></a>分类任务</h2><p><strong>任务</strong>：根据余额，判断小明是否会去看电影</p>
+<table>
+<thead>
+<tr>
+<th>训练数据</th>
+<th>余额</th>
+<th>决定</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>1、2、3、4、5</td>
+<td>看电影(正样本)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>-1、-2、-3、-4、-5</td>
+<td>不看电影(负样本)</td>
+</tr>
+<tr>
+<td><strong>分类任务的基本框架</strong>：</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>$$<br>\begin{cases}<br>	y&#x3D;f(x_1,x_2,\cdots,x_n) \<br>	Judged \ \  N，if\ \ y&#x3D;n<br>\end{cases}<br>$$</p>
+<p>$$<br>y&#x3D;f(x)\in{0,1}\to<br>\begin{cases}<br>	y&#x3D;0,不看电影(负样本) \<br>	y&#x3D;1,看电影(正样本)<br>\end{cases}<br>$$</p>
+<h2 id="逻辑回归"><a href="#逻辑回归" class="headerlink" title="逻辑回归"></a>逻辑回归</h2><p>用于解决分类问题的一种模型。根据数据特征和属性，计算其归属与某一类别的概率$P(x)$，根据概率数值判断其所属类别。主要应用场景：<strong>二分类问题</strong>。<br><strong>数学表达式</strong>:<br>$$<br>Y&#x3D;\frac{1}{1+e^{-x}}<br>$$</p>
+<p>$$<br>y&#x3D;<br>\begin{cases}<br>	1,\ \ \ \ P(x)\geqslant0.5 \<br>	0,\ \ \ \ P(x)&lt;0.5<br>\end{cases}<br>$$</p>
+<p>其中，$y$为类别结果，$P$ <strong>为概率分布函数</strong>，$x$为特征值</p>
+<h5 id="当分类任务变得更为复杂"><a href="#当分类任务变得更为复杂" class="headerlink" title="当分类任务变得更为复杂"></a>当分类任务变得更为复杂</h5><p><img  
+                       lazyload
+                       alt="image"
+                       data-src="/img/d452d7760f7d28e6c36276cc30e8f0fd.png"
+                       
+                 ><br>$$<br>P(x)&#x3D;\frac{1}{1+e^{-x}}<br>$$</p>
+<p>$$<br>\Downarrow<br>$$</p>
+<p>$$<br>P(x)&#x3D;\frac{1}{1+e^{-g(x)}}<br>$$</p>
+<p>$$<br>g(x)&#x3D;\theta_0+\theta_1x_1+\theta_2x_2<br>$$</p>
+<p>$$<br>g(x)&#x3D;-4+x_1+x_2<br>\begin{cases}<br>	&gt;0,\ \ \ \ 三角\<br>	&lt;0,\ \ \ \ 圆<br>\end{cases}<br>$$</p>
+<p><img  
+                       lazyload
+                       alt="image"
+                       data-src="/img/43bdc599ffb9bc81ac8336d3db684a30.png"
+                       
+                 ></p>
+<p>$$<br>P(x)&#x3D;\frac{1}{1+e^{-g(x)}}<br>$$</p>
+<p>$$<br>\Downarrow<br>$$</p>
+<p>$$<br>g(x)&#x3D;\theta_0+\theta_1x_1+\theta_2x_2<br>$$</p>
+<p>$$<br>g(x)&#x3D;\theta_0+\theta_1x_1+\theta_2x_2+\theta_3x_1^2+\theta_4^2<br>$$</p>
+<p>$$<br>g(x)&#x3D;-1+x_1^2+x_2^2<br>\begin{cases}<br>	&gt;0,\ \ \ \ 三角\<br>	&lt;0,\ \ \ \ 圆<br>\end{cases}<br>$$</p>
+<h3 id="逻辑回归最小损失函数-J"><a href="#逻辑回归最小损失函数-J" class="headerlink" title="逻辑回归最小损失函数(J)"></a>逻辑回归最小损失函数(J)</h3><p>$$<br>J_i&#x3D;<br>\begin{cases}<br>	-log(P(x_i)),if\ \ y_i&#x3D;1\<br>	-log(1-P(x_i)),if\ \ y_i&#x3D;0<br>\end{cases}<br>$$</p>
+<p>$$<br>\Updownarrow<br>$$</p>
+<p>$$<br>J&#x3D;\frac1m \sum_{i&#x3D;1}^mJ_i&#x3D;-\frac1m[\sum_{i&#x3D;1}^m(y_ilog(P(x_i))+(1-y_i)log(1-P(x_i)))]<br>$$</p>
+<h3 id="逻辑回归实战"><a href="#逻辑回归实战" class="headerlink" title="逻辑回归实战"></a>逻辑回归实战</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;  </span></span><br><span class="line"><span class="string">考试通过预测  </span></span><br><span class="line"><span class="string">examdata.csv为考试数据，包括Exam1, Exam2, Pass  </span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span>  </span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd  </span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np  </span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt  </span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LogisticRegression  </span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> accuracy_score  </span><br><span class="line">  </span><br><span class="line"><span class="comment">#load data  </span></span><br><span class="line">data = pd.read_csv(<span class="string">&#x27;examdata.csv&#x27;</span>)  </span><br><span class="line">data.head()  </span><br><span class="line">  </span><br><span class="line"><span class="comment">#visual the data  </span></span><br><span class="line">fig1 = plt.figure()  </span><br><span class="line">plt.scatter(data.loc[:,<span class="string">&#x27;Exam1&#x27;</span>], data.loc[:,<span class="string">&#x27;Exam2&#x27;</span>])  </span><br><span class="line">plt.title(<span class="string">&#x27;Exam1-Exam2&#x27;</span>)  </span><br><span class="line">plt.xlabel(<span class="string">&#x27;Exam1&#x27;</span>)  </span><br><span class="line">plt.ylabel(<span class="string">&#x27;Exam2&#x27;</span>)  </span><br><span class="line">plt.show()  </span><br><span class="line">  </span><br><span class="line"><span class="comment">#add label mask  </span></span><br><span class="line">mask = data.loc[:,<span class="string">&#x27;Pass&#x27;</span>] == <span class="number">1</span>  </span><br><span class="line">  </span><br><span class="line">fig2 = plt.figure()  </span><br><span class="line">passed = plt.scatter(data.loc[:,<span class="string">&#x27;Exam1&#x27;</span>][mask], data.loc[:,<span class="string">&#x27;Exam2&#x27;</span>][mask])  </span><br><span class="line">failed = plt.scatter(data.loc[:,<span class="string">&#x27;Exam1&#x27;</span>][~mask], data.loc[:,<span class="string">&#x27;Exam2&#x27;</span>][~mask])  </span><br><span class="line">plt.title(<span class="string">&#x27;Exam1-Exam2&#x27;</span>)  </span><br><span class="line">plt.xlabel(<span class="string">&#x27;Exam1&#x27;</span>)  </span><br><span class="line">plt.ylabel(<span class="string">&#x27;Exam2&#x27;</span>)  </span><br><span class="line">plt.legend((passed,failed),(<span class="string">&#x27;Pass&#x27;</span>,<span class="string">&#x27;Fail&#x27;</span>))  </span><br><span class="line">plt.show()  </span><br><span class="line">  </span><br><span class="line"><span class="comment">#define x,y  </span></span><br><span class="line">x = data.drop(<span class="string">&#x27;Pass&#x27;</span>, axis=<span class="number">1</span>)  </span><br><span class="line">y = data.loc[:,<span class="string">&#x27;Pass&#x27;</span>]  </span><br><span class="line">x1 =data.loc[:,<span class="string">&#x27;Exam1&#x27;</span>]  </span><br><span class="line">x2 =data.loc[:,<span class="string">&#x27;Exam2&#x27;</span>]  </span><br><span class="line">  </span><br><span class="line"><span class="comment">#establish the model and train it  </span></span><br><span class="line">LR = LogisticRegression()  </span><br><span class="line">LR.fit(x,y)  </span><br><span class="line">  </span><br><span class="line"><span class="comment">#show the predicted result and its accuracy  </span></span><br><span class="line">y_pred = LR.predict(x)  </span><br><span class="line"><span class="built_in">print</span>(y_pred)  </span><br><span class="line">  </span><br><span class="line">accuracy = accuracy_score(y, y_pred)  </span><br><span class="line"><span class="built_in">print</span>(accuracy)  </span><br><span class="line">  </span><br><span class="line"><span class="comment">#exam1=70,exam2=65  </span></span><br><span class="line">y_text = LR.predict([[<span class="number">70</span>,<span class="number">65</span>]])  </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;passed&#x27;</span> <span class="keyword">if</span> y_text == <span class="number">1</span> <span class="keyword">else</span> <span class="string">&#x27;failed&#x27;</span>)  </span><br><span class="line">  </span><br><span class="line">theta0 = LR.intercept_  </span><br><span class="line">theta1,theta2 = LR.coef_[<span class="number">0</span>][<span class="number">0</span>],LR.coef_[<span class="number">0</span>][<span class="number">1</span>]  </span><br><span class="line"><span class="built_in">print</span>(theta0,theta1,theta2)  </span><br><span class="line">  </span><br><span class="line">x2_new = -(theta0+theta1*x1)/theta2  </span><br><span class="line"><span class="built_in">print</span>(x2_new)  </span><br><span class="line">fig3 = plt.figure()  </span><br><span class="line">passed = plt.scatter(data.loc[:,<span class="string">&#x27;Exam1&#x27;</span>][mask], data.loc[:,<span class="string">&#x27;Exam2&#x27;</span>][mask])  </span><br><span class="line">failed = plt.scatter(data.loc[:,<span class="string">&#x27;Exam1&#x27;</span>][~mask], data.loc[:,<span class="string">&#x27;Exam2&#x27;</span>][~mask])  </span><br><span class="line">plt.plot(x1,x2_new)  </span><br><span class="line">plt.title(<span class="string">&#x27;Exam1-Exam2&#x27;</span>)  </span><br><span class="line">plt.xlabel(<span class="string">&#x27;Exam1&#x27;</span>)  </span><br><span class="line">plt.ylabel(<span class="string">&#x27;Exam2&#x27;</span>)  </span><br><span class="line">plt.legend((passed,failed),(<span class="string">&#x27;Pass&#x27;</span>,<span class="string">&#x27;Fail&#x27;</span>))  </span><br><span class="line">plt.show()  </span><br><span class="line">  </span><br><span class="line"><span class="comment">#creat new data  </span></span><br><span class="line">x1_2 = x1*x1  </span><br><span class="line">x2_2 = x2*x2  </span><br><span class="line">x1_x2 = x1*x2  </span><br><span class="line">x_new = &#123;<span class="string">&#x27;x1&#x27;</span>:x1,<span class="string">&#x27;x2&#x27;</span>:x2,<span class="string">&#x27;x1_2&#x27;</span>:x1_2,<span class="string">&#x27;x2_2&#x27;</span>:x2_2,<span class="string">&#x27;x1_x2&#x27;</span>:x1_x2&#125;  </span><br><span class="line">x_new =pd.DataFrame(x_new)  </span><br><span class="line">  </span><br><span class="line"><span class="comment">#establish new model and train  </span></span><br><span class="line">LR2 = LogisticRegression()  </span><br><span class="line">LR2.fit(x_new,y)  </span><br><span class="line">y2_pred = LR2.predict(x_new)  </span><br><span class="line">accuracy2 = accuracy_score(y, y2_pred)  </span><br><span class="line"><span class="built_in">print</span>(accuracy2)  </span><br><span class="line">  </span><br><span class="line">x1_new = x1.sort_values()  </span><br><span class="line">  </span><br><span class="line">theta0 = LR2.intercept_  </span><br><span class="line">theta1,theta2,theta3,theta4,theta5 = LR2.coef_[<span class="number">0</span>][<span class="number">0</span>],LR2.coef_[<span class="number">0</span>][<span class="number">1</span>],LR2.coef_[<span class="number">0</span>][<span class="number">2</span>],LR2.coef_[<span class="number">0</span>][<span class="number">3</span>],LR2.coef_[<span class="number">0</span>][<span class="number">4</span>]  </span><br><span class="line"><span class="built_in">print</span>(theta0,theta1,theta2,theta3,theta4,theta5)  </span><br><span class="line">a = theta4  </span><br><span class="line">b = theta5*x1_new+theta2  </span><br><span class="line">c = theta0+theta1*x1_new+theta3*x1_new*x1_new  </span><br><span class="line">x2_new_boundary = (-b+np.sqrt(b**<span class="number">2</span>-<span class="number">4</span>*a*c))/(<span class="number">2</span>*a)  </span><br><span class="line">  </span><br><span class="line">fig4 = plt.figure()  </span><br><span class="line">passed = plt.scatter(data.loc[:,<span class="string">&#x27;Exam1&#x27;</span>][mask], data.loc[:,<span class="string">&#x27;Exam2&#x27;</span>][mask])  </span><br><span class="line">failed = plt.scatter(data.loc[:,<span class="string">&#x27;Exam1&#x27;</span>][~mask], data.loc[:,<span class="string">&#x27;Exam2&#x27;</span>][~mask])  </span><br><span class="line">plt.plot(x1_new,x2_new_boundary)  </span><br><span class="line">plt.title(<span class="string">&#x27;Exam1-Exam2&#x27;</span>)  </span><br><span class="line">plt.xlabel(<span class="string">&#x27;Exam1&#x27;</span>)  </span><br><span class="line">plt.ylabel(<span class="string">&#x27;Exam2&#x27;</span>)  </span><br><span class="line">plt.legend((passed,failed),(<span class="string">&#x27;Pass&#x27;</span>,<span class="string">&#x27;Fail&#x27;</span>))  </span><br><span class="line">plt.show()  </span><br><span class="line">plt.plot(x1,x2_new_boundary)  </span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%BA%93/">库</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%85%AC%E5%BC%8F/">公式</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2025/03/09/%E5%9B%9E%E5%BD%92%E5%88%86%E6%9E%90/"
+                                   title="回归分析"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">回归分析</span>
+                                        <span class="post-nav-item">Prev posts</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E7%B1%BB%E4%BB%BB%E5%8A%A1"><span class="nav-text">分类任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92"><span class="nav-text">逻辑回归</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BD%93%E5%88%86%E7%B1%BB%E4%BB%BB%E5%8A%A1%E5%8F%98%E5%BE%97%E6%9B%B4%E4%B8%BA%E5%A4%8D%E6%9D%82"><span class="nav-text">当分类任务变得更为复杂</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E6%9C%80%E5%B0%8F%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0-J"><span class="nav-text">逻辑回归最小损失函数(J)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E5%AE%9E%E6%88%98"><span class="nav-text">逻辑回归实战</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+    &copy;&nbsp;<span>2024</span>&nbsp;-&nbsp;2026
+    
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Ebo</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+    </div>
+
+    
+
+    
+        <div class="count-info info-item">
+            
+
+            
+
+            
+                <span class="count-item border-box pv">
+                    <span class="item-type border-box">Page View</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E7%B1%BB%E4%BB%BB%E5%8A%A1"><span class="nav-text">分类任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92"><span class="nav-text">逻辑回归</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%BD%93%E5%88%86%E7%B1%BB%E4%BB%BB%E5%8A%A1%E5%8F%98%E5%BE%97%E6%9B%B4%E4%B8%BA%E5%A4%8D%E6%9D%82"><span class="nav-text">当分类任务变得更为复杂</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E6%9C%80%E5%B0%8F%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0-J"><span class="nav-text">逻辑回归最小损失函数(J)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E5%AE%9E%E6%88%98"><span class="nav-text">逻辑回归实战</span></a></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local search -->
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+<!-- lazyload -->
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>

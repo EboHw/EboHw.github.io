@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Ebo">
+    
+    <title>
+        
+            存储&amp;读写数据的方案 |
+        
+        Ebo&#39; Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"ebohw.github.io","root":"/","language":"en","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"Ebo' Blog","author":"Ebo","avatar":"/images/avatar.svg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives","tags":"/tags","categories":"/categories","links":"/links"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/dark_bg.svg","description":"Keep Coding, Keep Thinking.","hitokoto":false},"social_contact":{"enable":true,"links":{"github":"https://github.com/EboHw","weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":"ranqixxsss@gmail.com"}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":true,"tag":true,"post_datetime":"updated"},"post":{"author_badge":{"enable":false,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":false,"site_pv":true,"page_pv":true}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":true},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2024,"word_count":false,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{},"version":"4.2.5"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               Ebo&#39; Blog
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                HOME
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/archives">
+                                
+                                ARCHIVES
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/tags">
+                                
+                                TAGS
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/categories">
+                                
+                                CATEGORIES
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/links">
+                                
+                                LINKS
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="menu-text-color fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                            HOME
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
+                            
+                            ARCHIVES
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/tags">
+                            
+                            TAGS
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/categories">
+                            
+                            CATEGORIES
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/links">
+                            
+                            LINKS
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        存储&amp;读写数据的方案
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.svg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">Ebo</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2025-03-28 00:00:00</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                    <span class="datetime" data-updated="Wed Dec 17 2025 16:58:29 GMT+0800">2025-12-17 16:58:29</span>
+                </span>
+            
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">文件操作</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/File%E5%92%8CIO%E6%B5%81/">File和IO流</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body ">
+                    
+
+                    
+                         <h1 id="存储数据的方案"><a href="#存储数据的方案" class="headerlink" title="存储数据的方案"></a>存储数据的方案</h1><p><strong>File</strong>是java.io.包下的类，File类的对象，用于代表当前操作系统的文件（可以是文件、或文件夹）<br><strong>注意：</strong> File类只能对文件本身进行操作不能读写文件里面存储的数据</p>
+<h2 id="File、IO流"><a href="#File、IO流" class="headerlink" title="File、IO流"></a>File、IO流</h2><p><strong>IO流</strong>用于读写数据的（可以读写文件，或网络中的数据…）</p>
+<h3 id="File"><a href="#File" class="headerlink" title="File"></a>File</h3><p><strong>File类的对象可以代表文件&#x2F;文件夹，并可以调用其提供的方法对象文件进行操作。</strong></p>
+<p>创建File类的对象</p>
+<table>
+<thead>
+<tr>
+<th>构造器</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>public File(String pathname)</code></td>
+<td>根据文件路径创建文件对象</td>
+</tr>
+<tr>
+<td><code>public File(String parent, String child)</code></td>
+<td>根据父路径和子路径名字创建文件对象</td>
+</tr>
+<tr>
+<td><code>public File(File parent, String child)</code></td>
+<td>根据父路径对应文件对象和子路径名字创建文件对象</td>
+</tr>
+<tr>
+<td><strong>注意：</strong></td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>File对象既可以代表文件、也可以代表文件夹。</li>
+<li>File封装的对象仅仅是一个路径名，这个路径可以是存在的，也允许是不存在的。</li>
+</ul>
+<p><strong>File类提供的遍历文件夹的功能</strong></p>
+<table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>public String[] list()</code></td>
+<td>获取当前目录下所有的”一级文件名称”到一个字符串数组中去返回。</td>
+</tr>
+<tr>
+<td><code>public File[] listFiles()</code></td>
+<td>获取当前目录下所有的”一级文件对象”到一个文件对象数组中去返回（重点）<br></td>
+</tr>
+<tr>
+<td><strong>使用listFiles方法时的注意事项：</strong></td>
+<td></td>
+</tr>
+</tbody></table>
+<ul>
+<li>当主调是文件，或者路径不存在时，返回null</li>
+<li>当主调是空文件夹时，返回一个长度为0的数组</li>
+<li>当主调是一个有内容的文件夹时，将里面所有一级文件和文件夹的路径放在File数组中返回</li>
+<li>当主调是一个文件夹，且里面有隐藏文件时，将里面所有文件和文件夹的路径放在File数组中返回，包含隐藏文件</li>
+<li>当主调是一个文件夹，但是没有权限访问该文件夹时，返回null</li>
+</ul>
+<h3 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h3><p><strong>ASCII字符集</strong></p>
+<ul>
+<li>ASCll(American Standard Code for Information Interchange):美国信息交换标准代码，包括了英文、符号等。</li>
+<li>标准ASCII使用1个字节存储一个字符，首位是0，因此，总共可表示128个字符，对美国佬来说完全够用。</li>
+</ul>
+<p><strong>GBK（汉字内码扩展规范，国标）</strong></p>
+<ul>
+<li>汉字编码字符集，包含了2万多个汉字等字符，GBK中一个中文字符编码成<strong>两个字节的形式存储</strong></li>
+<li>注意：GBK兼容了ASCII字符集</li>
+</ul>
+<p><strong>Unicode字符集(统一码，也叫万国码)</strong></p>
+<ul>
+<li>Unicode是国际组织制定的，可以容纳世界上所有文字、符号的字符集。</li>
+<li>UTF-32，4个字节表示一个字符</li>
+</ul>
+<p><strong>UTF-8</strong></p>
+<ul>
+<li>是Unicode字符集的一种编码方案，采取可变长编码方案，共分四个长度区：1个字节，2个字节，3个字节，4个字节</li>
+<li>英文字符、数字等只占1个字节（兼容标准ASCI编码），汉字字符占用3个字节。<br><img  
+                       lazyload
+                       alt="image"
+                       data-src="/img/%E5%AD%98%E5%82%A8&%E8%AF%BB%E5%86%99%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E6%A1%88/ef8e7ce4ddbaec147725e01aa99de189.png"
+                       
+                 ></li>
+</ul>
+<p><strong>对字符的编码</strong></p>
+<table>
+<thead>
+<tr>
+<th>String提供了如下方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>byte[] getBytes()</code></td>
+<td>使用平台的默认字符集将该String编码为一系列字节，将结果存储到新的字节数组中</td>
+</tr>
+<tr>
+<td><code>byte[] getBytes(String charsetName)</code></td>
+<td>使用指定的字符集将该String编码为一系列字节，将结果存储到新的字节数组中</td>
+</tr>
+<tr>
+<td><strong>对字符的解码</strong></td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>String提供了如下方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>String(byte[] bytes)</code></td>
+<td>通过使用平台的默认字符集解码指定的字节数组来构造新的String</td>
+</tr>
+<tr>
+<td><code>String(byte[] bytes, String charsetName)</code></td>
+<td>通过指定的字符集解码指定的字节数组来构造新的String</td>
+</tr>
+</tbody></table>
+<h3 id="IO流"><a href="#IO流" class="headerlink" title="IO流"></a>IO流</h3><p><img  
+                       lazyload
+                       alt="image"
+                       data-src="/img/%E5%AD%98%E5%82%A8&%E8%AF%BB%E5%86%99%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E6%A1%88/a6cf2f8e6e5578080dd12d1bd78f392f.png"
+                       
+                 ></p>
+<p><strong>FileInputStream（文件字节输入流）</strong><br>作用：以内存为基准，可以把磁盘文件中的数据以字节的形式读入到内存中去</p>
+<table>
+<thead>
+<tr>
+<th>构造器</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>public FileInputStream(File file)</code></td>
+<td>创建字节输入流管道与源文件接通</td>
+</tr>
+<tr>
+<td><code>public FileInputStream(String pathname)</code></td>
+<td>创建字节输入流管道与源文件接通</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>public int read()</code></td>
+<td>每次读取一个字节返回，如果发现没有数据可读会返回-1.</td>
+</tr>
+<tr>
+<td><code>public int read(byte[] buffer)</code></td>
+<td>每次用一个字节数组去读取数据，返回字节数组读取了多少个字节，如果发现没有数据可读会返回-1.</td>
+</tr>
+</tbody></table>
+<p><strong>FileOutputStream文件字节输出流</strong><br>作用：以内存为基准，把内存中的数据以字节的形式写出到文件中去。</p>
+<table>
+<thead>
+<tr>
+<th>构造器</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>public FileOutputStream(File file)</code></td>
+<td>创建字节输出流管道与源文件对象接通</td>
+</tr>
+<tr>
+<td><code>public FileOutputStream(String filepath)</code></td>
+<td>创建字节输出流管道与源文件路径接通</td>
+</tr>
+<tr>
+<td><code>public FileOutputStream(File file, boolean append)</code></td>
+<td>创建字节输出流管道与源文件对象接通，可追加数据</td>
+</tr>
+<tr>
+<td><code>public FileOutputStream(String filepath, boolean append)</code></td>
+<td>创建字节输出流管道与源文件路径接通，可追加数据</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>public void write(int a)</code></td>
+<td>写一个字节出去</td>
+</tr>
+<tr>
+<td><code>public void write(byte[] buffer)</code></td>
+<td>写一个字节数组出去</td>
+</tr>
+<tr>
+<td><code>public void write(byte[] buffer , int pos , int len)</code></td>
+<td>写一个字节数组的一部分出去</td>
+</tr>
+<tr>
+<td><code>public void close() throws IOException</code></td>
+<td>关闭流</td>
+</tr>
+</tbody></table>
+<p><strong>资源释放</strong><br><code>try-with-resource</code></p>
+<p><strong>FileReader文件字符输入流</strong><br>作用：以内存为基准，可以把文件中的数据以字符的形式读入到内存中去。</p>
+<table>
+<thead>
+<tr>
+<th>构造器</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>public FileReader(File file)</code></td>
+<td>创建字符输入流管道与源文件接通</td>
+</tr>
+<tr>
+<td><code>public FileReader(String pathname)</code></td>
+<td>创建字符输入流管道与源文件接通</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>public int read()</code></td>
+<td>每次读取一个字符返回，如果发现没有数据可读会返回-1.</td>
+</tr>
+<tr>
+<td><code>public int read(char[] buffer)</code></td>
+<td>每次用一个字符数组去读取数据，返回字符数组读取了多少个字符，如果发现没有数据可读会返回-1.</td>
+</tr>
+</tbody></table>
+<p><strong>FileWriter文件字符输出流</strong><br>作用：以内存为基准，把内存中的数据以字符的形式写出到文件中去。</p>
+<table>
+<thead>
+<tr>
+<th>构造器</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>public FileWriter(File file)</code></td>
+<td>创建字节输出流管道与源文件对象接通</td>
+</tr>
+<tr>
+<td><code>public FileWriter(String filepath)</code></td>
+<td>创建字节输出流管道与源文件路径接通</td>
+</tr>
+<tr>
+<td><code>public FileWriter(File file, boolean append)</code></td>
+<td>创建字节输出流管道与源文件对象接通，可追加数据</td>
+</tr>
+<tr>
+<td>public FileWriter(String filepath, boolean append)</td>
+<td>创建字节输出流管道与源文件路径接通，可追加数据</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>方法名称</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>void write(int c)</code></td>
+<td>写一个字符</td>
+</tr>
+<tr>
+<td><code>void write(String str)</code></td>
+<td>写一个字符串</td>
+</tr>
+<tr>
+<td><code>void write(String str, int off int len)</code></td>
+<td>写一个字符串的一部分</td>
+</tr>
+<tr>
+<td><code>void write(char[] cbuf)</code></td>
+<td>写入一个字符数组</td>
+</tr>
+<tr>
+<td><code>void write(char[] cbuf, int off, int len)</code></td>
+<td>写入字符数组的一部分</td>
+</tr>
+</tbody></table>
+<h3 id="缓冲流"><a href="#缓冲流" class="headerlink" title="缓冲流"></a>缓冲流</h3><p><img  
+                       lazyload
+                       alt="image"
+                       data-src="/img/%E5%AD%98%E5%82%A8&%E8%AF%BB%E5%86%99%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E6%A1%88/d8af9828f49f945151d9dc66a1839d71.png"
+                       
+                 ><br><strong>BufferedInputStream缓冲字节输入流</strong><br>作用：可以提高字节输入流读取数据的性能<br>原理：缓冲字节输入流自带了8KB缓冲池；缓冲字节输出流也自带了8KB缓冲池。</p>
+<table>
+<thead>
+<tr>
+<th>构造器</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>public BufferedInputStream(InputStream is)</code></td>
+<td>把低级的字节输入流包装成一个高级的缓冲字节输入流，从而提高读数据的性能</td>
+</tr>
+<tr>
+<td><code>public BufferedOutputStream(OutputStream os)</code></td>
+<td>把低级的字节输出流包装成一个高级的缓冲字节输出流，从而提高写数据的性能</td>
+</tr>
+</tbody></table>
+<p><strong>BufferedReader缓冲字符输入流</strong><br>作用：自带8K（8192）的字符缓冲池，可以提高字符输入流读取字符数据的性能</p>
+<table>
+<thead>
+<tr>
+<th>构造器</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>public BufferedReader(Reader)</code></td>
+<td>把低级的字符输入流包装成字符缓冲输入流管道，从而提高字符输入流读字符数据的性能</td>
+</tr>
+<tr>
+<td>字符缓冲输入流新增的功能：按照行读取字符</td>
+<td></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>public String readLine()</code></td>
+<td>读取一行数据返回，如果没有数据可读了，会返回null</td>
+</tr>
+</tbody></table>
+<p><strong>BufferedWriter缓冲字符输出流</strong><br>作用：自带8K的字符缓冲池，可以提高字符输出流写字符数据的性能。</p>
+<table>
+<thead>
+<tr>
+<th>构造器</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>public BufferedWriter(Writer r)</code></td>
+<td>把低级的字符输出流包装成一个高级的缓冲字符输出流管道，从而提高字符输出流写数据的性能</td>
+</tr>
+</tbody></table>
+<p>字符缓冲输出流新增的功能：换行</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>public void newLine()</code></td>
+<td>换行</td>
+</tr>
+</tbody></table>
+<h3 id="其他流"><a href="#其他流" class="headerlink" title="其他流"></a>其他流</h3><p><strong>字符输入转换流</strong> <code>InputStreamReader</code></p>
+<p><strong>InputStreamReader（字符输入转换流）</strong></p>
+<ul>
+<li>解决不同编码时，字符流读取文本内容乱码的问题。</li>
+<li>解决思路：先获取文件的原始字节流，再将其按真实的字符集编码转成字符输入流，这样字符输入流中的字符就不乱码了。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>构造器</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>public InputStreamReader(InputStream is)</code></td>
+<td>把原始的字节输入流，按照代码默认编码转成字符输入流（与直接用FileReader的效果一样）</td>
+</tr>
+<tr>
+<td><code>public InputStreamReader(InputStream is ,String charset)</code></td>
+<td>把原始的字节输入流，按照指定字符集编码转成字符输入流（重点）</td>
+</tr>
+</tbody></table>
+<p><strong>打印流</strong><br>PrintStream&#x2F;PrintWriter（打印流）<br><strong>作用：</strong> 打印流可以实现更方便、更高效的打印数据出去，能实现打印啥出去就是啥出去。</p>
+<p>PrintStream提供的打印数据的方案</p>
+<table>
+<thead>
+<tr>
+<th>构造器</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>public Printstream(OutputStream/File/String)</code></td>
+<td>打印流直接通向字节输出流&#x2F;文件&#x2F;文件路径</td>
+</tr>
+<tr>
+<td><code>public PrintStream(String fileName, Charset charset)</code></td>
+<td>可以指定写出去的字符编码</td>
+</tr>
+<tr>
+<td>public PrintStream(OutputStream out, boolean autoFlush)</td>
+<td>可以指定实现自动刷新</td>
+</tr>
+<tr>
+<td>public PrintStream(OutputStream out, boolean autoFlush, String encoding)</td>
+<td>可以指定实现自动刷新，并可指定字符的编码</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>public void println(Xxx xx)</code></td>
+<td>打印任意类型的数据出去</td>
+</tr>
+<tr>
+<td><code>public void write(int/byte[]/byte[]一部分)</code></td>
+<td>可以支持写字节数据出去</td>
+</tr>
+</tbody></table>
+<h3 id="IO框架"><a href="#IO框架" class="headerlink" title="IO框架"></a>IO框架</h3><p><strong>什么是框架？</strong><br>框架（Framework）是一个预先写好的代码库或一组工具，旨在简化和加速开发过程<br>框架的形式：一般是把类、接口等编译成class形式，再压缩成一个jar结尾的文件发行出去。</p>
+
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/File%E5%92%8CIO%E6%B5%81/">File和IO流</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2025/03/28/Java%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"
+                                   title="JAVA网络编程"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">JAVA网络编程</span>
+                                        <span class="post-nav-item">Prev posts</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2025/03/23/%E5%8A%A0%E5%BC%BA/"
+                                   title="面向对象加强"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">面向对象加强</span>
+                                        <span class="post-nav-item">Next posts</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E6%A1%88"><span class="nav-text">存储数据的方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#File%E3%80%81IO%E6%B5%81"><span class="nav-text">File、IO流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#File"><span class="nav-text">File</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="nav-text">字符集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IO%E6%B5%81"><span class="nav-text">IO流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%93%E5%86%B2%E6%B5%81"><span class="nav-text">缓冲流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E6%B5%81"><span class="nav-text">其他流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IO%E6%A1%86%E6%9E%B6"><span class="nav-text">IO框架</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+    &copy;&nbsp;<span>2024</span>&nbsp;-&nbsp;2026
+    
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Ebo</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+    </div>
+
+    
+
+    
+        <div class="count-info info-item">
+            
+
+            
+
+            
+                <span class="count-item border-box pv">
+                    <span class="item-type border-box">Page View</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE%E7%9A%84%E6%96%B9%E6%A1%88"><span class="nav-text">存储数据的方案</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#File%E3%80%81IO%E6%B5%81"><span class="nav-text">File、IO流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#File"><span class="nav-text">File</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="nav-text">字符集</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IO%E6%B5%81"><span class="nav-text">IO流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%93%E5%86%B2%E6%B5%81"><span class="nav-text">缓冲流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E6%B5%81"><span class="nav-text">其他流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IO%E6%A1%86%E6%9E%B6"><span class="nav-text">IO框架</span></a></li></ol></li></ol></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local search -->
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+<!-- lazyload -->
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
