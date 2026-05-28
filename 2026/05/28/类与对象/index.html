@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Ebo">
+    
+    <title>
+        
+            类与对象 |
+        
+        Ebo&#39; Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/logo.svg">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"ebohw.github.io","root":"/","language":"en","path":"search.json"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"Ebo' Blog","author":"Ebo","avatar":"/images/avatar.svg","logo":"/images/logo.svg","favicon":"/images/logo.svg"},"menu":{"home":"/","archives":"/archives","tags":"/tags","categories":"/categories","links":"/links"},"first_screen":{"enable":true,"background_img":"/images/bg.svg","background_img_dark":"/images/dark_bg.svg","description":"Keep Coding, Keep Thinking.","hitokoto":false},"social_contact":{"enable":true,"links":{"github":"https://github.com/EboHw","weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":"ranqixxsss@gmail.com"}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":true,"tag":true,"post_datetime":"updated"},"post":{"author_badge":{"enable":false,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"default"},"toc":{"enable":true,"number":false,"expand_all":true,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":true,"site_uv":false,"site_pv":true,"page_pv":true}},"local_search":{"enable":true,"preload":true},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":true},"cdn":{"enable":false,"provider":"cdnjs"},"pjax":{"enable":false},"footer":{"since":2024,"word_count":false,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","source_data":{},"version":"4.2.5"}
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"}
+    KEEP.language_code_block = {"copy":"Copy code","copied":"Copied","fold":"Fold code block","folded":"Folded"}
+    KEEP.language_copy_copyright = {"copy":"Copy copyright info","copied":"Copied","title":"Original post title","author":"Original post author","link":"Original post link"}
+  </script>
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/logo.svg">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               Ebo&#39; Blog
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                HOME
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/archives">
+                                
+                                ARCHIVES
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/tags">
+                                
+                                TAGS
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/categories">
+                                
+                                CATEGORIES
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/links">
+                                
+                                LINKS
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="menu-text-color fas search fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                            HOME
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
+                            
+                            ARCHIVES
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/tags">
+                            
+                            TAGS
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/categories">
+                            
+                            CATEGORIES
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/links">
+                            
+                            LINKS
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        类与对象
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/avatar.svg">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">Ebo</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2026-05-28 15:00:00</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                    <span class="datetime" data-updated="Thu May 28 2026 18:56:10 GMT+0800">2026-05-28 18:56:10</span>
+                </span>
+            
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/C/">C++</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+            <span class="post-tag meta-info-item border-box">
+                <ul class="post-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%B1%BB/">类</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%AF%B9%E8%B1%A1/">对象</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">单例模式</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a></li>
+                        
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%8A%A8%E6%80%81%E6%95%B0%E7%BB%84/">动态数组</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+            <span class="meta-info-item post-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body ">
+                    
+
+                    
+                         <h1 id="1-面向对象思想"><a href="#1-面向对象思想" class="headerlink" title="1 面向对象思想"></a>1 面向对象思想</h1><p><strong>过程论</strong>认为：数据和逻辑是分离的、独立的，程序世界本质是过程，数据作为过程处理对象，逻辑作为过程的形式定义，世界就是各个过程不断进行的总体。</p>
+<p><strong>对象论</strong>认为：数据和逻辑不是分离的，而是相互依存的。相关的数据和逻辑形成个体，这些个体叫做对象，世界就是由一个个对象组成的。对象具有相对独立性，对外提供一定的服务。所谓世界的演进，是在某个“初始作用力”作用下，对象间通过相互调用而完成的交互；在没有初始作用力下，对象保持静止。这些交互并不是完全预定义的，不一定有严格的因果关系，对象间交互是“偶然的”，对象间联系是“暂时的”。世界就是由各色对象组成，然后在初始作用力下，对象间的交互完成了世界的演进。过程论和对象论不是一种你死我活的绝对对立，而是一种辩证统一的对立，两者相互渗透、在一定情况下可以相互转化，是一种“你中有我、我中有你”的对立。如果将对象论中的所有交互提取出来而撇开对象，就变成了过程论，而如果对过程论中的数据和逻辑分类封装并建立交互关系，就变成了对象论。</p>
+<p>过程论相对确定，有利于明晰演进的方向，但当事物过于庞大繁杂，将很难理清思路。因为过程繁多、过程中又有子过程，容易将整个世界看成一个纷繁交错的过程网，让人无法看清。对象论相对不确定，但是因为以对象为基本元素，即使很庞大的事物，也可以很好地分离关注，在研究一个对象的交互时，只需要关系与其相关的少数几个对象，不用总是关注整个流程和世界，<strong>对象论更有助于分析规模较大的事物</strong>。但是，对象论也有困难。例如，如何划分对象才合理？对于同一个驱动力，为什么不同情况下参与对象和交互流程不一样？如何确定？其实，这些困难也正是面向对象技术中的困难。</p>
+<h1 id="2-类的定义"><a href="#2-类的定义" class="headerlink" title="2 类的定义"></a>2 类的定义</h1><p>C++用类来描述对象，类是对现实世界中相似事物的抽象，比如同是“双轮车”的摩托车和自行车，有共同点，也有许多不同点。“车”类是对摩托车、自行车、汽车等相同点的提取与抽象。</p>
+<p>类的定义分为两个部分：</p>
+<ol>
+<li>数据，相当于现实世界中的属性，称为<strong>数据成员</strong>;</li>
+<li>对数据的操作，相当于现实世界中的行为，称为<strong>成员函数</strong>。</li>
+</ol>
+<p>有些地方，会将类的数据成员和成员函数统称为类的<strong>成员</strong>。</p>
+<p>从程序设计的观点来说，<strong>类就是数据类型</strong>，是用户定义的数据类型，对象可以看成某个类的实例（某类的变量）。所以说类是对象的抽象，对象是类的实例。</p>
+<p><mark>由对象抽象出类</mark><br><mark>由类实例出对象</mark><br>C++中用关键字class来定义一个类，其基本形式如下：类的定义和声明</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">MyClass</span>&#123; <span class="comment">//类的定义</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">myFunc</span><span class="params">()</span></span>&#123;&#125;  <span class="comment">// 成员函数</span></span><br><span class="line">    <span class="type">int</span> _a;          <span class="comment">// 数据成员</span></span><br><span class="line">&#125;; <span class="comment">// 一定要有分号</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 类也可以先声明，后完成定义</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyClass2</span>; <span class="comment">// 类的声明</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">MyClass2</span>&#123; <span class="comment">// 类的定义</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;; <span class="comment">// 分号不能省略</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-1-访问修饰符"><a href="#2-1-访问修饰符" class="headerlink" title="2.1 访问修饰符"></a>2.1 访问修饰符</h2><p>如下，我们定义好一个Computer的类，假设我们站在代工厂的视角，这个Computer类拥有两个属性——<strong>品牌与价格</strong>；两个行为——<strong>设置品牌与设置价格</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Computer</span> &#123;</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">setBrand</span><span class="params">(<span class="type">const</span> <span class="type">char</span> * brand)</span> </span>&#123;</span><br><span class="line">		<span class="built_in">strcpy</span>(_brand, brand);</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">setPrice</span><span class="params">(<span class="type">float</span> price)</span> </span>&#123;</span><br><span class="line">		_price = price;</span><br><span class="line">	&#125;</span><br><span class="line">    </span><br><span class="line">	<span class="type">char</span> _brand[<span class="number">20</span>];</span><br><span class="line">	<span class="type">float</span> _price;</span><br><span class="line">&#125;；</span><br></pre></td></tr></table></figure>
+<p>按之前的理解，现在我们自定义了一个新的类——Computer类，我们需要实例化出一个对象（特定的Computer），再通过这个对象来访问数据成员或调用成员函数，如下</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Computer pc;</span><br><span class="line">pc.<span class="built_in">setPrice</span>(<span class="number">10000</span>); <span class="comment">// error</span></span><br><span class="line">pc._price; <span class="comment">// error</span></span><br></pre></td></tr></table></figure>
+<p>结果发现都会报错，这是什么原因呢？事实上，class中的所有的成员都拥有自己的访问权限，分别可以用以下的三个访问修饰符进行修饰:<br><code>public</code>: &#x2F;&#x2F;公有的访问权限，在类外可以通过对象直接访问公有成员<br><code>protected</code>:&#x2F;&#x2F;保护的访问权限，在本类中和派生类中可以访问，在类外不能通过对象直接访问（后<br><code>private</code>:&#x2F;&#x2F;私有的访问权限，在本类之外不能访问，比较敏感的数据设为private，类定义中可以访问。</p>
+<p><strong>注意：</strong></p>
+<ul>
+<li>类定义中访问修饰符的管理范围从当前行到下一个访问修饰符或类定义结束；</li>
+<li>class定义中如果在成员定义（或声明）之前没有任何访问修饰符，其<strong>默认的访问权限为私有</strong>。<br>补充：public的成员函数也可以称为接口，就是该类提供给外界使用的路径，在类外可以直接通过对象进行访问</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Computer</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">setBrand</span><span class="params">(<span class="type">const</span> <span class="type">char</span> * brand)</span> </span>&#123;</span><br><span class="line">		<span class="built_in">strcpy</span>(_brand, brand);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">setPrice</span><span class="params">(<span class="type">float</span> price)</span> </span>&#123;</span><br><span class="line">		_price = price;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="type">char</span> _brand[<span class="number">20</span>];</span><br><span class="line">	<span class="type">float</span> _price;</span><br><span class="line">&#125;;</span><br><span class="line">    </span><br><span class="line">Computer pc;</span><br><span class="line">pc.<span class="built_in">setPrice</span>(<span class="number">10000</span>); <span class="comment">// ok</span></span><br><span class="line">pc._price; <span class="comment">// error,因为_price是私有的</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-2-struct与class的对比"><a href="#2-2-struct与class的对比" class="headerlink" title="2.2 struct与class的对比"></a>2.2 struct与class的对比</h2><p>学习了类的定义后，我们会发现它与C语言中的struct很相似。<br><strong>C语言中的struct</strong>回顾一下C语言中struct的写法</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Student</span> &#123;</span><br><span class="line">    <span class="type">int</span> number;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">25</span>];</span><br><span class="line">    <span class="type">int</span> score;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test0</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">Student</span> s1;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">Student</span> s2 = &#123;<span class="number">10</span>, <span class="string">&quot;Jack&quot;</span>, <span class="number">98</span>&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>采用typedef取别名后更像C++的class</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">struct</span> &#123;</span><br><span class="line">    <span class="type">int</span> number;</span><br><span class="line">    <span class="type">char</span> name[<span class="number">25</span>];</span><br><span class="line">    <span class="type">int</span> score;</span><br><span class="line">&#125; Student;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test0</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Student s1;</span><br><span class="line">    Student s2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>C中的struct只能是一些变量的集合体，可以封装数据但不能隐藏数据，而且成员不能是函数，要使用函数只能使用函数指针的方式。访问权限限制、继承性、构造析构都没有。事实上，C中struct的这种封装属于广义上的封装。面向对象的封装是指<strong>隐藏对象的属性和实现细节，仅对外公开接口，控制在程序中属性的读和修改的访问级别；将抽象得到的数据和操作数据的方法相结合，形成“类”</strong>。</p>
+<ul>
+<li><strong>C++中的struct</strong><br>  C++中的struct对C中的struct做了拓展，基本等同于class，默认访问权限是public.</li>
+<li><strong>C++中的class</strong><br>  class默认访问权限是private.</li>
+</ul>
+<h2 id="2-3-成员函数的定义"><a href="#2-3-成员函数的定义" class="headerlink" title="2.3 成员函数的定义"></a>2.3 成员函数的定义</h2><p>成员函数可以在类内部完成定义，也可以在类内部只进行声明，在类外部完成定义。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Computer</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="comment">// 成员函数</span></span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">setBrand</span><span class="params">(<span class="type">const</span> <span class="type">char</span> * brand)</span></span>;<span class="comment">// 设置品牌</span></span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">setPrice</span><span class="params">(<span class="type">float</span> price)</span></span>; <span class="comment">// 设置价格</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">print</span><span class="params">()</span></span>; <span class="comment">// 打印信息</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="comment">// 数据成员</span></span><br><span class="line">	<span class="type">char</span> _brand[<span class="number">20</span>];</span><br><span class="line">	<span class="type">float</span> _price;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Computer::setBrand</span><span class="params">(<span class="type">const</span> <span class="type">char</span> * brand)</span> </span>&#123; </span><br><span class="line">    <span class="built_in">strcpy</span>(_brand, brand); </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Computer::setPrice</span><span class="params">(<span class="type">float</span> price)</span> </span>&#123; </span><br><span class="line">    _price = price;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实际开发中为什么采用成员函数声明和实现分离的写法？<br>当类中成员函数比较多（复杂），不容易看，如果只在类中进行成员函数的声明（同时配上注释），会方便理解。</p>
+<p><mark>多文件联合编译时可能出现的错误</mark><br>为什么一般不在头文件中定义函数？<br>在头文件中定义一个函数时，如果多个源文件都包含了该头文件，那么在联合编译时会出现重定义错误。因为头文件的内容在每个源文件中都会被复制一份，而每个源文件都会生成对应的目标文件。在链接的阶段，会出现多个相同函数定义的情况，导致重定义错误。<br>对于成员函数，也存在这样的问题。</p>
+<p><strong>如果在头文件中采用成员函数声明和定义分离的形式，在类外部完成成员函数的实现，就会陷入这个错误。</strong><br><strong>解决方法1：</strong> 在成员函数的定义前加上inline关键字，inline函数定义在头文件中是ok的<br><strong>解决方法2：</strong> 将成员函数放到类内部进行定义（<strong>说明类内部定义的成员函数就是inline函数</strong>——默认效果）<br><strong>解决方法3：</strong> <mark>函数声明放在头文件，函数定义放在实现文件中</mark>，就算有多个测试文件，也不会出现重定义（最常用的方式）。</p>
+<h1 id="3-对象的创建"><a href="#3-对象的创建" class="headerlink" title="3 对象的创建"></a>3 对象的创建</h1><p>在之前的 Computer 类中，通过自定义的公共成员函数 setBrand 和 setPrice 实现了对数据成员的”初始化”（严格意义上是赋值）。<br>实际上，C++ 为类提供了一种<mark>特殊的成员函数——构造函数</mark>来完成真正的初始化。</p>
+<ul>
+<li>构造函数的作用：就是用来初始化数据成员的</li>
+<li>构造函数的形式：<br>  <strong>没有返回值，即使是void也不能有；</strong><br>  <strong>函数名与类名相同，再加上函数参数列表。</strong><br>构造函数在对象创建时<strong>自动调用</strong>，用以完成<strong>数据成员的初始化，及其他操作</strong>(如为指针成员动态申请内存等)</li>
+</ul>
+<h2 id="3-1-对象的创建规则"><a href="#3-1-对象的创建规则" class="headerlink" title="3.1 对象的创建规则"></a>3.1 对象的创建规则</h2><p>当类中没有显式定义构造函数时 ，编译器会自动生成一个默认 (无参) 构造函数 ，但并不会初始化数据成员；<br>以Point类为例：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Point</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="comment">// ...</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="type">int</span> _ix;</span><br><span class="line">	<span class="type">int</span> _iy;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test0</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Point pt; <span class="comment">// 调用了默认的无参构造</span></span><br><span class="line">	pt.<span class="built_in">print</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 运行结果显示，pt的_ix,_iy都是不确定的值</span></span><br></pre></td></tr></table></figure>
+<p><code>Point pt;</code> 这种方式创建的对象，其数据成员没有被初始化,输出的会是不确定的值</p>
+<p>当类中显式提供了构造函数时 ，编译器就不会再自动生成默认的构造函数；</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Point</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Point</span>() &#123;</span><br><span class="line">        _ix = <span class="number">0</span>;</span><br><span class="line">        _iy = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">print</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="comment">// ...</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="type">int</span> _ix;</span><br><span class="line">	<span class="type">int</span> _iy;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test0</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Point pt;</span><br><span class="line">	pt.<span class="built_in">print</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 这次创建pt对象时就调用了自定义的构造函数，而非默认构造函数</span></span><br></pre></td></tr></table></figure>
+
+<p>编译器自动生成的默认构造函数是无参的，构造函数也可以接收参数，在对象创建时提供更大的自由度；</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Point</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Point</span>(<span class="type">int</span> ix, <span class="type">int</span> iy) &#123;</span><br><span class="line">        _ix = ix;</span><br><span class="line">        _iy = iy;</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="comment">// ...</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="type">int</span> _ix;</span><br><span class="line">	<span class="type">int</span> _iy;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test0</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Point pt; <span class="comment">// error,没有默认的无参构造函数可供调用</span></span><br><span class="line">    <span class="function">Point <span class="title">pt2</span><span class="params">(<span class="number">10</span>,<span class="number">20</span>)</span></span>;</span><br><span class="line">	pt<span class="number">2.</span><span class="built_in">print</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果还希望通过无参构造函数创建对象， 则必须要手动提供一个无参构造函数；</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Point</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Point</span>()&#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">Point</span>(<span class="type">int</span> ix, <span class="type">int</span> iy) &#123;</span><br><span class="line">        _ix = ix;</span><br><span class="line">        _iy = iy;</span><br><span class="line">    &#125;</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">print</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="comment">// ...</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="type">int</span> _ix;</span><br><span class="line">	<span class="type">int</span> _iy;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test0</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Point pt; <span class="comment">// ok</span></span><br><span class="line">    <span class="function">Point <span class="title">pt2</span><span class="params">(<span class="number">10</span>,<span class="number">20</span>)</span></span>;</span><br><span class="line">	pt<span class="number">2.</span><span class="built_in">print</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>构造函数可以重载<br>如上，一个类中可以有多种形式的构造函数，说明构造函数可以重载。事实上，真实的开发中经常会给一个类定义各种形式的构造函数，以提升代码的灵活性（可以用多种不同的数据来创建出同一类的对象）。</p>
+<h2 id="3-2-对象的数据成员的初始化"><a href="#3-2-对象的数据成员的初始化" class="headerlink" title="3.2 对象的数据成员的初始化"></a>3.2 对象的数据成员的初始化</h2><p>上述例子中，在构造函数的函数体中对数据成员进行赋值，其实严格意义上不算初始化（而是算赋值）。<br>在C++中，对于类中数据成员的初始化，<strong>推荐</strong>使用<strong>初始化列表</strong>完成。<br>初始化列表位于构造函数形参列表之后，函数体之前，用冒号开始，如果有多个数据成员，再用逗号分隔，初始值放在一对小括号中。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Point</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="comment">//...</span></span><br><span class="line">	<span class="built_in">Point</span>(<span class="type">int</span> ix = <span class="number">0</span>, <span class="type">int</span> iy = <span class="number">0</span>)</span><br><span class="line">	: _ix(ix)</span><br><span class="line">    , _iy(iy)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;Point(int,int)&quot;</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//...</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>如果没有在构造函数的初始化列表中显式地初始化成员，则该成员将在构造函数体之前执行默认初始化。如在“对象的创建规则”示例代码中，有参的构造函数中 <code>_ix</code> 和 <code>_iy</code> 都是先执行默认初始化后，再在函数体中执行赋值操作。<br>补充：<strong>数据成员的初始化并不取决于其在初始化列表中的顺序，而是取决于声明时的顺序（与声明顺序一致）</strong>。</p>
+<p>构造函数的参数也可以按从右向左规则赋默认值，同样的，如果构造函数的声明和定义分开写，只用在声明或定义中的一处设置参数默认值，一般建议在声明中设置默认值。</p>
+<p>C++11之后，普通的数据成员也可以在声明时就进行初始化 <strong>(类似于默认值的性质)</strong>。<br>但一些特殊的数据成员初始化只能在初始化列表中进行，故一般情况下统一推荐在初始化列表中进行数据成员初始化。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Point</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="comment">//...</span></span><br><span class="line">    <span class="type">int</span> _ix = <span class="number">0</span>; <span class="comment">// C++11</span></span><br><span class="line">    <span class="type">int</span> _iy = <span class="number">0</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>数据成员初始化的顺序与其声明的顺序保持一致，与它们在初始化列表中的顺序无关（但初始化列表一般保持与数据成员声明的顺序一致）。</p>
+<h2 id="3-3-对象所占空间的大小"><a href="#3-3-对象所占空间的大小" class="headerlink" title="3.3 对象所占空间的大小"></a>3.3 对象所占空间的大小</h2><p>之前在讲引用的知识点时，我们提过使用引用作为函数的返回值可以避免多余的复制。内置类型的变量最大也就是<code>long</code> <code>double</code>, 占16个字节。但是现在我们学习了类的定义，自定义类型对象的大小可以非常大。</p>
+<p>使用<strong>sizeof</strong>查看一个类的大小和查看该类对象的大小，得到的结果是相同的（<strong>类是对象的模板</strong>）；</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">test0</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="function">Point <span class="title">pt</span><span class="params">(<span class="number">1</span>,<span class="number">2</span>)</span></span>;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">sizeof</span>(Point) &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; <span class="built_in">sizeof</span>(pt) &lt;&lt; endl;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>成员函数并不影响对象的大小，对象的大小与数据成员有关（后面学习继承、多态，对象的内存布局会更复杂）；<br>现阶段，在不考虑继承多态的情况下，我们做以下测试。发现有时一个类所占空间大小就是其数据成员类型所占大小之和，有时则不是，这就是因为有<mark>内存对齐</mark>的机制。</p>
+<p><strong>为什么要进行内存对齐？</strong></p>
+<ol>
+<li>平台原因(移植原因)：不是所有的硬件平台都能访问任意地址上的任意数据的；某些硬件平台只能在某些地址处取某些特定类型的数据，否则抛出硬件异常。</li>
+<li>性能原因：CPU 对内存的读取不是连续的，而是分成块读取的，块的大小只能是1、2、4、8、16 … 字节。若不进行内存对齐，可能需要做两次内存访问，性能会大打折扣；而进行过内存对齐仅需要一次访问。</li>
+</ol>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">======================= 结构体内存对齐对比图 =======================</span><br><span class="line"></span><br><span class="line">【 无内存对齐 】(紧凑排布)</span><br><span class="line"> 字节索引:  0   1   2   3   4   5   6   7</span><br><span class="line">          ┌───┬───┬───┬───┬───┬───┬───┬───┐</span><br><span class="line"> 第一行:   │ a │ a │ a │ a │ b │ b │ b │ b │  &lt;- 变量 b 的前 4 字节</span><br><span class="line">          ├───┼───┼───┼───┼───┼───┼───┼───┤</span><br><span class="line"> 第二行:   │ b │ b │ b │ b │   │   │   │   │  &lt;- 变量 b 的后 4 字节</span><br><span class="line">          └───┴───┴───┴───┴───┴───┴───┴───┘</span><br><span class="line">          * 特点：数据紧挨着放。若 CPU 每次读 8 字节，</span><br><span class="line">                 读取变量 b 需要跨两行，进行 2 次内存访问。</span><br><span class="line"></span><br><span class="line">                       │</span><br><span class="line">                       ▼ 硬件优化</span><br><span class="line">【 有内存对齐 】(空间换时间)</span><br><span class="line"> 字节索引:  0   1   2   3   4   5   6   7</span><br><span class="line">          ┌───┬───┬───┬───┬───┬───┬───┬───┐</span><br><span class="line"> 第一行:   │ a │ a │ a │ a │[X]│[X]│[X]│[X]│  &lt;- [X] 为填充字节 (Padding)</span><br><span class="line">          ├───┼───┼───┼───┼───┼───┼───┼───┤</span><br><span class="line"> 第二行:   │ b │ b │ b │ b │ b │ b │ b │ b │  &lt;- 变量 b 整体移到对齐边界处</span><br><span class="line">          └───┴───┴───┴───┴───┴───┴───┴───┘</span><br><span class="line">                          ▲</span><br><span class="line">                          红色箭头指示的边界</span><br><span class="line"></span><br><span class="line">          * 特点：通过在变量 a 后面填充 4 个空字节 [X]，</span><br><span class="line">                 让 8 字节的变量 b 完美对齐到下一行的起始地址。</span><br><span class="line">                 这样 CPU 只需要 1 次内存访问就能完整读出 b，效率更高！</span><br></pre></td></tr></table></figure>
+<p>64位系统默认以8个字节的块大小进行读取。</p>
+<p>如果没有内存对齐机制，CPU读取<code>_price</code>时，需要两次总线周期来访问内存，第一次读取 <code>_price</code>数据前四个字节的内容，第二次读取后四个字节的内容，还要经过计算，将它们合并成一个数据。</p>
+<p>有了内存对齐机制后，以浪费4个字节的空间为代价，读取_price时只需要一次访问，所以编译器会隐式地进行内存对齐。</p>
+<p><strong>规则：</strong><br><mark>按照类中占空间最大的数据成员大小的倍数对齐</mark><br>如果数据成员再多一些，我们发现自定义类型对象所占的空间大小还与这些数据成员的顺序有关</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">C</span> &#123;</span><br><span class="line">    <span class="type">int</span> _c1;</span><br><span class="line">    <span class="type">int</span> _c2;</span><br><span class="line">    <span class="type">double</span> _c3;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// sizeof(C) = 16</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">D</span> &#123;</span><br><span class="line">    <span class="type">int</span> _d1;</span><br><span class="line">    <span class="type">double</span> _d2;</span><br><span class="line">    <span class="type">int</span> _d3;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// sizeof(D) = 24</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">======================= 结构体变量顺序与内存对齐图 ========================</span><br><span class="line"></span><br><span class="line">【 class C：不合理的变量顺序（浪费空间） 】</span><br><span class="line"> 字节索引:   0    1    2    3    4    5    6    7</span><br><span class="line">          ┌────┬────┬────┬────┬────┬────┬────┬────┐</span><br><span class="line"> 第一行:   │ c1 │ c1 │ c1 │ c1 │ c2 │ c2 │ c2 │ c2 │  &lt;- c1(4字节) + c2(4字节) 刚好填</span><br><span class="line">          ├────┼────┼────┼────┼────┼────┼────┼────┤                       满 8 字节</span><br><span class="line"> 第二行:   │ c3 │ c3 │ c3 │ c3 │ c3 │ c3 │ c3 │ c3 │  &lt;- c3(8字节) 另起一行</span><br><span class="line">          └────┴────┴────┴────┴────┴────┴────┴────┘</span><br><span class="line">          * 总大小：8 + 8 = 16 字节 (利用率：100%)</span><br><span class="line"></span><br><span class="line">                       │ </span><br><span class="line">                       ▼ 改变了变量声明顺序（引入 c2 扩容导致的变化）</span><br><span class="line">                       </span><br><span class="line">【 class D：调整顺序后触发的内存对齐（产生空隙） 】</span><br><span class="line"> 字节索引:   0    1    2    3    4    5    6    7</span><br><span class="line">          ┌────┬────┬────┬────┬────┬────┬────┬────┐</span><br><span class="line"> 第一行:   │ d1 │ d1 │ d1 │ d1 │[X] │[X] │[X] │[X] │  &lt;- d1(4字节) 后面填充了 4 字节的 </span><br><span class="line">          ├────┼────┼────┼────┼────┼────┼────┼────┤               [X] (Padding)</span><br><span class="line"> 第二行:   │ d2 │ d2 │ d2 │ d2 │ d2 │ d2 │ d2 │ d2 │  &lt;- d2(8字节) 必须从 8 字节对齐边</span><br><span class="line">          ├────┼────┼────┼────┼────┼────┼────┼────┤               界开始</span><br><span class="line"> 第三行:   │ d3 │ d3 │ d3 │ d3 │[X] │[X] │[X] │[X] │  &lt;- d3(4字节) 后面填充 4 字节以满</span><br><span class="line">          └────┴────┴────┴────┴────┴────┴────┴────┘               足整体 8 字节对齐</span><br><span class="line">          * 总大小：8 + 8 + 8 = 24 字节 (其中 8 字节是无用的空隙 [X]！)</span><br></pre></td></tr></table></figure>
+
+<p>如果数据成员中有数组类型,会按照除数组以外的其他数据成员中最大的那一个的倍数对齐</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">E</span> &#123;</span><br><span class="line">    <span class="type">double</span> _e;</span><br><span class="line">    <span class="type">char</span> _eArr[<span class="number">20</span>];</span><br><span class="line">    <span class="type">double</span> _e1;</span><br><span class="line">    <span class="type">int</span> _e2;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// sizeof(E) = 48</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">F</span> &#123;</span><br><span class="line">    <span class="type">char</span> _fArr[<span class="number">20</span>];</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// sizeof(F) = 20</span></span><br></pre></td></tr></table></figure>
+
+<p>在C语言的涉及的结构体代码中，我们可能会看到<code>#pragma pack</code>的一些设置，<code>#pragma pack(n)</code>即设置编译器按照n个字节对齐，n可以取值1,2,4,8,16.在C++中也可以使用这个设置，最终的对齐效果将按照 <code>#pragma pack</code> 指定的数值和类中最大的数据成员长度中，比较小的那个的倍数进行对齐。</p>
+<p>还有一种特殊情况，如果定义了一个空类，这个类依然是可以创建对象的。空类对象所占空间为1个字节，这仅仅是编译器的一种占位机制。</p>
+<p><strong>总结：</strong><br>除数组外，其他类型的数据成员中，以较大的数据成员所占空间的倍数去对齐。<br>内存对齐还与数据成员的声明顺序有关。</p>
+<h2 id="3-4-指针数据成员"><a href="#3-4-指针数据成员" class="headerlink" title="3.4 指针数据成员"></a>3.4 指针数据成员</h2><p>类的数据成员中有指针时，意味着创建该类的对象时要进行指针成员的初始化，需要申请堆空间。<br><strong>在初始化列表中申请空间，在函数体中复制内容。</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Computer</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">Computer</span>(<span class="type">const</span> <span class="type">char</span> * brand, <span class="type">double</span> price)</span><br><span class="line">	: _brand(<span class="keyword">new</span> <span class="type">char</span>[<span class="built_in">strlen</span>(brand) + <span class="number">1</span>]())</span><br><span class="line">	, _price(price)</span><br><span class="line">	&#123;</span><br><span class="line">        <span class="built_in">strcpy</span>(_brand,brand);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="type">char</span> * _brand;</span><br><span class="line">	<span class="type">double</span> _price;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test0</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="function">Computer <span class="title">pc</span><span class="params">(<span class="string">&quot;Apple&quot;</span>,<span class="number">12000</span>)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>思考一下，以上代码有没有问题？</p>
+<p>代码运行没有报错，但使用memcheck工具检查发现发生了内存泄漏。有<code>new</code>表达式被执行，就要想到通过<code>delete</code>表达式来进行回收。如果没有对应的回收机制，对象被销毁时，它所申请的堆空间不会被回收，就会发生内存泄漏。</p>
+<p>那么如何进行妥善的内存回收呢？这需要交给<strong>析构函数</strong>来完成。</p>
+<h1 id="4-对象的销毁"><a href="#4-对象的销毁" class="headerlink" title="4 对象的销毁"></a>4 对象的销毁</h1><ol>
+<li>析构函数：对象在销毁时，一定会调用析构函数</li>
+<li>析构函数的作用：<mark>清理对象的数据成员申请的资源（堆空间）</mark>—— 析构函数并不负责清理数据成员(系统自动完成)</li>
+<li>形式：【特殊的成员函数】<ul>
+<li>没有返回值，即使是void也没有</li>
+<li>没有参数</li>
+<li>函数名与类名相同，在类名之前需要加上一个波浪号~</li>
+</ul>
+</li>
+<li>析构函数只有一个（不能重载）</li>
+<li><strong>析构函数默认情况下 ，系统也会自动提供一个</strong></li>
+<li><mark>当对象被销毁时 ，会自动调用析构函数【非常重要】</mark></li>
+</ol>
+<h2 id="4-1-自定义析构函数"><a href="#4-1-自定义析构函数" class="headerlink" title="4.1 自定义析构函数"></a>4.1 自定义析构函数</h2><p>之前的例子中，我们没有显式定义出析构函数，但是没有问题，系统会自动提供一个默认的析构。</p>
+<p><strong>析构函数作为一个清理数据成员申请的堆空间的接口存在。</strong></p>
+<p>当数据成员中有指针时，创建一个对象，会申请堆空间，销毁对象时默认析构不够用了（造成内存泄漏），此时就需要我们自定义析构函数。在析构函数中定义堆空间上内存回收的机制，就不会发生内存泄漏。</p>
+<p>同样以Computer类为例</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Computer</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">Computer</span>(<span class="type">const</span> <span class="type">char</span> * brand, <span class="type">double</span> price)</span><br><span class="line">	: _brand(<span class="keyword">new</span> <span class="type">char</span>[<span class="built_in">strlen</span>(brand) + <span class="number">1</span>]())</span><br><span class="line">	, _price(price)</span><br><span class="line">	&#123;&#125;</span><br><span class="line">	</span><br><span class="line">	~<span class="built_in">Computer</span>() &#123;	</span><br><span class="line">        <span class="keyword">if</span>(_brand) &#123;</span><br><span class="line">            <span class="keyword">delete</span> [] _brand;</span><br><span class="line">        	_brand = <span class="literal">nullptr</span>; <span class="comment">// 设为空指针，安全回收</span></span><br><span class="line">        &#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="type">char</span> * _brand;</span><br><span class="line">	<span class="type">double</span> _price;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>析构函数：</strong> 如果指针成员申请了堆空间，就回收这片空间，并将指针成员设为空指针，进行安全回收。</p>
+<p>析构函数的规范写法为什么这样写呢？实际上，如果类中没有指针数据成员，即数据成员没有申请堆空间的情况下，默认的析构函数就够用了。</p>
+<p>（1）如果没有进行安全回收这一步会引发很多问题，此时我们没有学习类与对象的更多知识，可以做个简单小实验，看看会发生什么情况，思考一下原因</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">~<span class="built_in">Computer</span>() &#123;</span><br><span class="line">	<span class="keyword">if</span>(_brand)&#123;</span><br><span class="line">    	<span class="keyword">delete</span> [] _brand;</span><br><span class="line">        <span class="comment">//_brand = nullptr//设为空指针，安全回收</span></span><br><span class="line">       &#125;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;~Computer()&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test0</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="function">Computer <span class="title">pc</span><span class="params">(<span class="string">&quot;apple&quot;</span>,<span class="number">12000</span>)</span></span>;</span><br><span class="line">    pc.<span class="built_in">print</span>();</span><br><span class="line">    pc.~<span class="built_in">Computer</span>();<span class="comment">//手动调用析构函数</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>——第一次手动调用析构函数时已经回收了这片堆空间，但是_brand存的地址值依然有效，当对象销毁时自动调用析构函数，依然会进入if语句，再一次试图回收这片空间，发生double free错误。</p>
+<p>（2）如果没有对指针成员的判断，可能会有delete一个空指针的情况。尽管一些平台，delete本身会自动检查对象是否为空，如果为空就不做操作，但是在其他的一些平台这样做可能会导致风险，所以请按照规范去定义析构函数。</p>
+<p>注意：对象被销毁，一定会调用析构函数；<br><strong>调用了析构函数，对象并不会被销毁。</strong><br>结论：<strong>不建议手动调用析构函数，因为容易导致各种问题，应该让析构函数自动被调用。</strong></p>
+<p><strong>注：</strong> 析构函数是可以通过对象来调用，而构造函数不同。<br>构造函数是最特殊的成员函数，不是由对象来调用构造函数。而是，编译器在看到创建对象的语句时，会自动生成一段代码，在这段代码中调用构造函数，利用传入的参数来初始化对象。</p>
+<h2 id="4-2-析构函数的调用时机"><a href="#4-2-析构函数的调用时机" class="headerlink" title="4.2 析构函数的调用时机"></a>4.2 析构函数的调用时机</h2><ol>
+<li>对于<strong>全局对象</strong>，<strong>整个程序结束时</strong>，自动调用全局对象的析构函数。</li>
+<li>对于<strong>局部对象</strong>，在<strong>程序离开局部对象的作用域</strong>时调用对象的析构函数。</li>
+<li>对于<strong>静态对象</strong>，在<strong>整个程序结束时</strong>调用析构函数。</li>
+<li>对于<strong>堆对象</strong>，<mark>在使用 delete 删除该对象时，调用析构函数。</mark></li>
+</ol>
+<h1 id="5-本类对象的复制"><a href="#5-本类对象的复制" class="headerlink" title="5 本类对象的复制"></a>5 本类对象的复制</h1><h2 id="5-1-拷贝构造函数"><a href="#5-1-拷贝构造函数" class="headerlink" title="5.1 拷贝构造函数"></a>5.1 拷贝构造函数</h2><p>对于内置类型而言，使用一个变量初始化另一个变量是很常见的操作</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">1</span>;</span><br><span class="line"><span class="type">int</span> y = x;</span><br></pre></td></tr></table></figure>
+
+<p>那么对于自定义类型，我们也希望能有这样的效果，如</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Point <span class="title">pt1</span><span class="params">(<span class="number">1</span>,<span class="number">2</span>)</span></span>;</span><br><span class="line">Point pt2 = pt1;</span><br></pre></td></tr></table></figure>
+<p>发现这种操作也是可以通过的。执行 <code>Point pt2 = pt1;</code> 语句时， <code>pt1</code> 对象已经存在，而 <code>pt2</code> 对象还不存在，所以也是这句创建了 <code>pt2</code> 对象，既然涉及到对象的创建，就必然需要调用构造函数，而这里会调用的就是拷贝构造函数(复制构造函数)。</p>
+<h3 id="5-1-1-拷贝构造函数的定义"><a href="#5-1-1-拷贝构造函数的定义" class="headerlink" title="5.1.1 拷贝构造函数的定义"></a>5.1.1 拷贝构造函数的定义</h3><p>拷贝构造函数的形式是固定的：<mark>类名(const 类名 &amp;)</mark></p>
+<ol>
+<li>该函数是一个构造函数 —— 拷贝构造也是构造！</li>
+<li>该函数用一个已经存在的同类型的对象，来初始化新对象，即对对象本身进行复制<br>没有显式定义拷贝构造函数，这条复制语句依然可以通过，说明编译器自动提供了默认的拷贝构造函数。其形式是：</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Point</span>(<span class="type">const</span> Point &amp; rhs)</span><br><span class="line">: _ix(rhs._ix)</span><br><span class="line">, _iy(rhs._iy)</span><br><span class="line">&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>拷贝构造函数看起来非常简单，那么我们尝试对Computer类的对象进行同样的复制操作。发现同样可以编译通过，但运行报错。思考一下为什么？</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Computer <span class="title">pc</span><span class="params">(<span class="string">&quot;Acer&quot;</span>,<span class="number">4500</span>)</span></span>;</span><br><span class="line">Computer pc2 = pc;<span class="comment">//调用拷贝构造函数</span></span><br></pre></td></tr></table></figure>
+<p>如果是默认的拷贝构造函数，pc2会对pc的_brand进行<strong>浅拷贝</strong>，指向同一片内存；pc2被销毁时，会调用析构函数，将这片堆空间进行回收；pc再销毁时，析构函数中又会试图回收这片空间，出现double free问题。</p>
+<p>所以，如果拷贝构造函数需要显式写出时（该类有指针成员申请堆空间），在自定义的拷贝构造函数中要换成<strong>深拷贝</strong>的方式，先申请空间，再复制内容</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Computer::<span class="built_in">Computer</span>(<span class="type">const</span> Computer &amp; rhs)</span><br><span class="line">: _brand(<span class="keyword">new</span> <span class="type">char</span>[<span class="built_in">strlen</span>(rhs._brand) + <span class="number">1</span>]())</span><br><span class="line">, _price(rhs._price)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">strcpy</span>(_brand, rhs._brand);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-1-2-拷贝构造函数的调用时机-重要"><a href="#5-1-2-拷贝构造函数的调用时机-重要" class="headerlink" title="5.1.2 拷贝构造函数的调用时机(重要)"></a>5.1.2 拷贝构造函数的调用时机(重要)</h3><ol>
+<li>当使用一个已经存在的对象初始化另一个同类型的新对象时；</li>
+<li>当函数参数（实参和形参的类型都是对象），形参与实参结合时（实参初始化形参）；<br> —— 为了避免这次不必要的拷贝，可以使用引用作为参数</li>
+<li>当函数的返回值是对象，执行return语句时（编译器有优化）。<br> ——为了避免这次多余的拷贝，可以使用引用作为返回值，但一定要确保返回值的生命周期大于函数的生命周期</li>
+</ol>
+<h3 id="5-1-3-拷贝构造函数的形式探究"><a href="#5-1-3-拷贝构造函数的形式探究" class="headerlink" title="5.1.3 拷贝构造函数的形式探究*"></a>5.1.3 拷贝构造函数的形式探究*</h3><p><mark>思考1：拷贝构造函数是否可以去掉引用符号？</mark><br>—— 类名(const 类名) 形式，首先编译器不允许这样写，直接报错</p>
+<p>如果拷贝函数的参数中去掉引用符号，进行拷贝时调用拷贝构造函数的过程中会发生“实参和形参都是对象，用实参初始化形参”（拷贝构造第二种调用时机），会再一次调用拷贝构造函数。形成递归调用，直到栈溢出，导致程序崩溃。</p>
+<p><mark>思考2：拷贝构造函数是否可以去掉const？</mark><br>—— 类名(类名 &amp;) 形式 编译器不会报错<br>加const的第一个用意：为了确保右操作数的数据成员不被改变<br>如果不加const，那么如下操作是可以通过的，不合理。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Point</span>(Point &amp;rhs)</span><br><span class="line">: _ix(rhs._ix)</span><br><span class="line">, _iy(rhs._iy)</span><br><span class="line">&#123;</span><br><span class="line">	rhs._ix = <span class="number">0</span>;</span><br><span class="line">	rhs._iy = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>加const的第二个用意：<strong>为了能够复制临时对象的内容，因为非const引用不能绑定临时变量（右值）</strong></p>
+<p>如果拷贝构造函数中去掉const</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Computer &amp; rhs = <span class="built_in">Computer</span>(<span class="string">&quot;apple&quot;</span>,<span class="number">12000</span>); <span class="comment">// error</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-2-赋值运算符函数"><a href="#5-2-赋值运算符函数" class="headerlink" title="5.2 赋值运算符函数"></a>5.2 赋值运算符函数</h2><p>赋值运算同样是一种很常见的运算，比如：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> x = <span class="number">1</span>, y = <span class="number">2</span>;</span><br><span class="line">x = y;</span><br></pre></td></tr></table></figure>
+<p>自定义类型当然也需要这种运算，比如：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Point <span class="title">pt1</span><span class="params">(<span class="number">1</span>, <span class="number">2</span>)</span>, <span class="title">pt2</span><span class="params">(<span class="number">3</span>, <span class="number">4</span>)</span></span>;</span><br><span class="line">pt1 = pt2; <span class="comment">// 赋值操作</span></span><br></pre></td></tr></table></figure>
+<p>在执行 <code>pt1 = pt2;</code> 该语句时， pt1 与 pt2 都存在，所以不存在对象的构造，这要与 <code>Point pt2 =pt1;</code> 语句区分开，这是不同的</p>
+<h3 id="5-2-1-赋值运算符函数的形式"><a href="#5-2-1-赋值运算符函数的形式" class="headerlink" title="5.2.1 赋值运算符函数的形式"></a>5.2.1 赋值运算符函数的形式</h3><p>在上述例子中，当 &#x3D; 作用于对象时，其实是把它当成一个函数来看待的。在执行 <code>pt1 = pt2;</code> 该语句时，需要调用的是<strong>赋值运算符函数</strong>。其形式如下：<br><mark>类名&amp; operator&#x3D;(const 类名 &amp;)</mark><br>对Point类进行测试时，会发现我们不需要显式给出赋值运算符函数，就可以执行测试。这是因为如果类中没有显式定义赋值运算符函数时，编译器会自动提供一个赋值运算符函数。对于 Point 类而言，其实现如下:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Point &amp; Point::<span class="keyword">operator</span>=(<span class="type">const</span> Point &amp; rhs) &#123;</span><br><span class="line">	_ix = rhs._ix;</span><br><span class="line">	_iy = rhs._iy;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>手动写出赋值运算符，再加上函数调用的提示语句。执行发现语句被输出，也就是说，<strong>当对象已经创建时，将另一个对象的内容复制给这个对象，会调用赋值运算符函数</strong>。</p>
+<p>那么现在又产生了<strong>问题1</strong><br>首先，赋值号是一个双目运算符，如果把它视为一个函数，那么应该有两个参数。但是从赋值运算符函数的形式上看只接收了一个参数，为什么？</p>
+<p>其次，赋值运算符函数返回类型是Point&amp;，那么它的返回值是什么？</p>
+<p>这两个问题引出了一个重要的知识点——<strong>this指针</strong></p>
+<h3 id="5-2-2-this指针"><a href="#5-2-2-this指针" class="headerlink" title="5.2.2 this指针"></a>5.2.2 this指针</h3><p><strong>this指针的本质</strong><br>this指针的本质是一个常量指针 <code>Type* const pointer</code>; 它储存了调用它的对象的地址，不可被修改。这样成员函数才知道自己修改的成员变量是哪个对象的。</p>
+<p><strong>this</strong>是一个隐藏的指针，可以在类的成员函数中使用，它可以用来指向调用对象。当一个对象的成员函数被调用时，编译器会隐式地传递该对象的地址作为 this 指针。</p>
+<p><strong>this指针指向本对象</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 返回类型是 Point &amp;</span></span><br><span class="line"><span class="comment">// 函数名是 operator=</span></span><br><span class="line"><span class="comment">// 参数是 const Point &amp;</span></span><br><span class="line"><span class="comment">// this 不能显示地在参数列表中写出</span></span><br><span class="line"><span class="comment">// 因为编译器一定会加入一个 this 作为第一个参数</span></span><br><span class="line">Point &amp;<span class="keyword">operator</span>=(<span class="type">const</span> Point &amp;rhs) &#123;</span><br><span class="line">	<span class="comment">// 可以通过 this 指针指向其修改的内容</span></span><br><span class="line">	<span class="comment">// 不能修改 this 的指向</span></span><br><span class="line">	<span class="comment">// 因为 this 是常量指针</span></span><br><span class="line">	<span class="keyword">this</span>-&gt;_ix = rhs._ix;</span><br><span class="line">	<span class="keyword">this</span>-&gt;_iy = rhs._iy;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>this指针存在哪儿</strong><br>编译器在生成程序时加入了获取对象首地址的相关代码，将获取的首地址存放在了寄存器中，这就是this指针。</p>
+<p><strong>this指针的生命周期</strong><br><strong>this 指针的生命周期开始于成员函数的执行开始。</strong> 当一个非静态成员函数被调用时，this 指针被自动设置为指向调用该函数的对象实例。在成员函数执行期间，this 指针一直有效。它可以被用来访问调用对象的成员变量和成员函数。**this指针的生命周期结束于成员函数的执行结束。**当成员函数返回时，this指针的作用范围就结束了。</p>
+<p>要注意，this指针的生命周期与它所指向的对象的生命周期虽然并不完全相同，但是是相关的。</p>
+<p>this指针本身只在成员函数执行期间存在，但它指向的对象可能在成员函数执行前就已经存在，并且在成员函数执行后继续存在。</p>
+<p>如果成员函数是通过一个已经销毁或未初始化的对象调用的，this指针将是悬挂的，它的使用将会是未定义行为。</p>
+<p><strong>理解以下问题：</strong></p>
+<ol>
+<li>对象调用函数时，是如何找到自己本对象的数据成员的？ —— 通过this指针</li>
+<li>this指针代表的是什么？ —— 指向本对象</li>
+<li>this指针在参数列表中的什么位置？ —— 参数列表的第一位（默认自动加入，不要手动写出）</li>
+<li>this指针的形式是什么？ —— 类名 * const this （常量指针）</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Point &amp; <span class="keyword">operator</span>=(<span class="type">const</span> Point &amp; rhs) &#123;</span><br><span class="line">    <span class="keyword">this</span>-&gt;_ix = rhs._ix;</span><br><span class="line">    <span class="keyword">this</span>-&gt;_iy = rhs._iy;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;Point &amp; operator=(const Point &amp;)&quot;</span> &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>成员函数中可以加上this指针，展示本对象通过this指针找到本对象的数据成员。但是不要在参数列表中显式加上this指针，因为编译器一定会在参数列表的第一位加上this指针，如果显式再给一个，参数数量就不对了。</p>
+<h3 id="5-2-3-赋值运算符函数的定义"><a href="#5-2-3-赋值运算符函数的定义" class="headerlink" title="5.2.3 赋值运算符函数的定义"></a>5.2.3 赋值运算符函数的定义</h3><p><strong>注意：</strong> 如果对象的指针数据成员申请了堆空间，默认的赋值运算符函数就不够用了，以Computer类为例，默认的赋值运算符函数长这样</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Computer &amp; <span class="keyword">operator</span>=(<span class="type">const</span> Computer &amp; rhs) &#123;</span><br><span class="line">    <span class="keyword">this</span>-&gt;_brand = rhs._brand;</span><br><span class="line">    <span class="keyword">this</span>-&gt;_price = rhs._price;</span><br><span class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里的指针成员_brand是进行的浅拷贝，会造成问题。</p>
+<p><strong>思考：</strong> 如果直接进行深拷贝，可行吗？</p>
+<p><mark>总结步骤—— 四步走（重点）：</mark></p>
+<ol>
+<li>考虑自赋值问题</li>
+<li>回收左操作数的数据成员原本申请的堆空间</li>
+<li>深拷贝（以及其他的数据成员的赋值）</li>
+<li>返回<code>*this</code>（本对象）</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Computer &amp; <span class="keyword">operator</span>=(<span class="type">const</span> Computer &amp; rhs) &#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="keyword">this</span> != &amp;rhs)&#123;</span><br><span class="line">        <span class="keyword">delete</span> [] _brand;</span><br><span class="line">        _brand = <span class="keyword">new</span> <span class="type">char</span>[<span class="built_in">strlen</span>(rhs._brand)]();</span><br><span class="line">        <span class="built_in">strcpy</span>(_brand, rhs._brand);</span><br><span class="line">        _price = rhs._price;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-2-4-赋值运算符函数的形式探究"><a href="#5-2-4-赋值运算符函数的形式探究" class="headerlink" title="5.2.4 赋值运算符函数的形式探究*"></a>5.2.4 赋值运算符函数的形式探究*</h3><p><mark>以下提出四个思考：</mark></p>
+<ol>
+<li>赋值运算符函数的返回必须是一个引用吗？</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Computer <span class="keyword">operator</span>=(<span class="type">const</span> Computer &amp; rhs) &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>—— 会造成一次多余的拷贝，增加不必要的开销</strong></p>
+<ol start="2">
+<li>赋值操作符函数的返回类型可以是void吗？</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="keyword">operator</span>=(<span class="type">const</span> Computer &amp; rhs) &#123;</span><br><span class="line">	<span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>赋值操作符函数的参数一定要是引用吗？</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Computer &amp; <span class="keyword">operator</span>=(<span class="type">const</span> Computer rhs) &#123;</span><br><span class="line">	<span class="comment">// ...</span></span><br><span class="line">	<span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>—— 会造成一次多余的拷贝，增加不必要的开销</strong>（符合拷贝构造函数的第二种调用时机）<br>注意：此时讨论的是赋值运算符函数的参数形式，前提是拷贝构造是正常的。拷贝构造的参数依然是引用，就不会陷入拷贝构造递归调用。</p>
+<ol start="4">
+<li>赋值操作符函数的参数必须是一个const引用吗？</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Computer &amp; <span class="keyword">operator</span>=(Computer &amp; rhs) &#123;</span><br><span class="line">	<span class="comment">// ...</span></span><br><span class="line">	<span class="keyword">return</span> *<span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>—— <strong>无法避免在赋值运算符函数中修改右操作数的内容，不合理</strong><br>—— 而且不能处理通过右值属性的对象进行赋值的情况</p>
+<h2 id="5-3-三合成原则"><a href="#5-3-三合成原则" class="headerlink" title="5.3 三合成原则*"></a>5.3 三合成原则*</h2><p><mark>三合成原则</mark>：<br><strong>拷贝构造函数、赋值运算符函数、析构函数，如果需要手动定义其中的一个，那么另外两个也需要手动定义。</strong></p>
+<h1 id="6-特殊的数据成员"><a href="#6-特殊的数据成员" class="headerlink" title="6 特殊的数据成员"></a>6 特殊的数据成员</h1><p>在 C++ 的类中，有4种比较特殊的数据成员，分别是<strong>常量成员</strong>、<strong>引用成员</strong>、<strong>类对象成员</strong>和<strong>静态成员</strong>，它们的初始化与普通数据成员有所不同。</p>
+<h2 id="6-1-常量数据成员"><a href="#6-1-常量数据成员" class="headerlink" title="6.1 常量数据成员"></a>6.1 常量数据成员</h2><p>当数据成员用 const 关键字进行修饰以后，就成为常量成员。一经初始化，该数据成员便具有“只读属性”，在程序中无法对其值修改。事实上，在构造函数体内对const 数据成员赋值是非法的，<mark>const数据成员需在初始化列表中进行初始化</mark>（C++11之后也允许在声明时就初始化）。</p>
+<p>普通的const常量必须在声明时就初始化，初始化之后就不再允许修改值；</p>
+<p>const成员初始化后也不再允许修改值。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Point</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">Point</span>(<span class="type">int</span> ix, <span class="type">int</span> iy)</span><br><span class="line">	: _ix(ix)</span><br><span class="line">	, _iy(iy)</span><br><span class="line">	&#123;&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="type">const</span> <span class="type">int</span> _ix;</span><br><span class="line">	<span class="type">const</span> <span class="type">int</span> _iy;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><em>初始化列表对数据成员的初始化是严格的初始化</em></p>
+<h2 id="6-2-引用数据成员"><a href="#6-2-引用数据成员" class="headerlink" title="6.2 引用数据成员"></a>6.2 引用数据成员</h2><p><mark>引用数据成员在初始化列表中进行初始化</mark>，C++11之后允许在声明时初始化（绑定）。<br>之前的学习中，我们知道了引用要绑定到已经存在的变量，引用成员同样如此。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Point</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">Point</span>(<span class="type">int</span> ix, <span class="type">int</span> iy)</span><br><span class="line">	: _ix(ix)</span><br><span class="line">	, _iy(iy)</span><br><span class="line">	, _iz(_ix)</span><br><span class="line">	&#123;&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="type">int</span> _ix;</span><br><span class="line">	<span class="type">int</span> _iy;</span><br><span class="line">	<span class="type">int</span> &amp; _iz;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>思考：构造函数再接收一个参数，用这个参数初始化引用成员可以吗？</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Point</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">Point</span>(<span class="type">int</span> x,<span class="type">int</span> y,<span class="type">int</span> z)</span><br><span class="line">	: _ix(x)</span><br><span class="line">	, _iy(y)</span><br><span class="line">	, _iz(z) <span class="comment">// 这样绑定可行吗</span></span><br><span class="line">			 <span class="comment">// 可行，但这个被绑定的数据能活多久？</span></span><br><span class="line">	&#123;&#125;</span><br><span class="line">    </span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="type">int</span> _ix;</span><br><span class="line">	<span class="type">int</span> _iy;</span><br><span class="line">	<span class="type">int</span> &amp; _iz;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>引用成员需要绑定一个已经存在的、且在这个引用成员的生命周期内始终有效的变量（对象）。</strong></p>
+<h2 id="6-3-对象成员"><a href="#6-3-对象成员" class="headerlink" title="6.3 对象成员"></a>6.3 对象成员</h2><p>有时候，一个类对象会作为另一个类对象的数据成员被使用。比如一个直线类Line对象中包含两个Point对象。<br><mark>对象成员在初始化列表中进行初始化</mark></p>
+<p><strong>注意：</strong></p>
+<ol>
+<li>初始化列表中写的是需要被初始化的对象成员的名称，而不是对象成员的类名。</li>
+<li>不能在声明对象成员时直接使用有参构造去创建。</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Line</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">Line</span>(<span class="type">int</span> x1, <span class="type">int</span> y1, <span class="type">int</span> x2, <span class="type">int</span> y2)</span><br><span class="line">	: _pt1(x1, y1) <span class="comment">// Point _pt1(x1,y1)</span></span><br><span class="line">	, _pt2(x2, y2)</span><br><span class="line">	&#123;&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	Point _pt1;</span><br><span class="line">	Point _pt2;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>注意：<br><strong>如果在Line类的构造函数的初始化列表中没有显式地初始化Point类对象成员，编译器会自动去调用Point类型的默认无参构造；</strong></p>
+<p>如果不想用Point的无参构造，那么必须在Line类的初始化列表中对Point类的对象成员进行初始化</p>
+<blockquote>
+<p>有对象成员的结构下，构造函数和析构函数的调用顺序：</p>
+<p>此例子中，创建一个Line类的对象，会首先调用Line的构造函数，在此过程中调用Point的构造函数完成Point类对象成员的初始化；</p>
+<p>Line对象销毁时会先调用Line的析构函数，析构函数执行完后，再调用Point的析构函数。</p>
+<p>如下：尽管Point构造函数的调用提示在Line的构造函数之前，但这仅仅是因为Point的构造函数在Line的初始化列表中调用，执行完Point的构造函数之后，才会执行Line构造函数的函数体中的内容。</p>
+</blockquote>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Point(int, int)</span><br><span class="line">Point(int, int)</span><br><span class="line">Line(int, int, int, int)</span><br><span class="line">~Line()</span><br><span class="line">~Point()</span><br><span class="line">~Point()</span><br></pre></td></tr></table></figure>
+<p><strong>一个Line对象中包含两个Point对象，称为成员子对象。</strong></p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">创建 Line 对象会马上调用 Line 的构造函数</span><br><span class="line">在 Line 的构造函数执行过程中调用 Point 的构造函数</span><br><span class="line">Line 对象要销毁，就会马上调用 Line 的析构函数</span><br><span class="line">Line 的析构函数执行完之后，再根据对象成员声明的反序</span><br><span class="line">通过成员子对象调用 Point 的析构函数</span><br><span class="line">此处就是 _pt2 调用析构函数，执行完后， _pt1 再调用析构函类</span><br><span class="line">Line l(1,2,3,4);</span><br></pre></td></tr></table></figure>
+<p>如果Line类中有数据成员申请堆空间，Point类对象也有数据成员申请堆空间，堆空间资源的回收顺序如下</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">======================= 组合类构造/析构与堆空间回收顺序图 =======================</span><br><span class="line"></span><br><span class="line">【 栈区：Line 对象的内部结构 】                 【 堆区：各自申请的动态内存 】</span><br><span class="line">┌──────────────────────────────┐              ┌──────────────────────────────┐</span><br><span class="line">│ Line 对象 (局部变量，在栈上)   │               │ (3) _pt1 申请的堆空间          │</span><br><span class="line">│  ┌────────────────────────┐  │              │     [ 内存块 ] ──────(第3步释放)┼─X </span><br><span class="line">│  │ Point _pt1;            ├──┼─────────────&gt;│                              │</span><br><span class="line">│  ├────────────────────────┤  │              ├──────────────────────────────┤</span><br><span class="line">│  │ Point _pt2;            ├──┼─────────────&gt;│ (2) _pt2 申请的堆空间          │</span><br><span class="line">│  ├────────────────────────┤  │              │     [ 内存块 ] ──────(第2步释放)┼─X </span><br><span class="line">│  │ char * _p;             ├──┼─────────────&gt;│                              │</span><br><span class="line">│  └────────────────────────┘  │              ├──────────────────────────────┤</span><br><span class="line">└──────────────────────────────┘              │ (1) _p 申请的堆空间            │</span><br><span class="line">                                              │     [ 内存块 ] ──────(第1步释放)┼─X </span><br><span class="line">                                              └──────────────────────────────┘</span><br><span class="line"></span><br><span class="line">─────────────────────────────────────────────────────────────────────────────────</span><br><span class="line"></span><br><span class="line">【 执行流时间轴 (Timeline) 】</span><br><span class="line"></span><br><span class="line">▲ 构造阶段 (从上往下)</span><br><span class="line">│  1. Point(int,int)     -&gt; 优先构造数成员 _pt1</span><br><span class="line">│  2. Point(int,int)     -&gt; 接着构造数据成员 _pt2</span><br><span class="line">│  3. Line(int*4)        -&gt; 最后执行 Line 自己的构造函数本体</span><br><span class="line">│</span><br><span class="line">▼ 析构与资源回收阶段 (从下往上，严格对称反向)</span><br><span class="line">│  1. ~Line()            -&gt; 先调用 Line 的析构函数，在此处手动 delete 了 (1) _p 的堆空间</span><br><span class="line">│  2. ~Point()           -&gt; 接着自动调用成员 _pt2 的析构函数，释放了 (2) _pt2 的堆空间</span><br><span class="line">└─ 3. ~Point()           -&gt; 最后自动调用成员 _pt1 的析构函数，释放了 (3) _pt1 的堆空间</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-4-静态数据成员"><a href="#6-4-静态数据成员" class="headerlink" title="6.4 静态数据成员"></a>6.4 静态数据成员</h2><p>C++ 允许使用 static （静态存储）修饰数据成员，这样的成员在创建对象之前被创建并初始化的。且其实例只有一个，被所有该类的对象共享，就像住在同一宿舍里的同学共享一个房间号一样。<strong>静态数据成员存储在全局&#x2F;静态区，并不占据对象的存储空间</strong>。<br><mark>静态数据成员被整个类的所有对象共享</mark></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Computer</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="comment">//...    </span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="type">char</span> * _brand;</span><br><span class="line">	<span class="type">double</span> _price;</span><br><span class="line">    <span class="comment">// 数据成员的类型前面加上static关键字</span></span><br><span class="line">    <span class="comment">// 表示这是一个static数据成员（共享）</span></span><br><span class="line">	<span class="type">static</span> <span class="type">double</span> _totalPrice;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="type">double</span> Computer::_totalPrice = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+<p>静态成员规则：</p>
+<ol>
+<li>private的静态数据成员无法在类之外直接访问（显然）</li>
+<li><mark>对于静态数据成员的初始化，必须放在类外</mark>（一般紧接着类的定义，这是规则1的特殊情况）</li>
+<li>静态数据成员初始化时不能在数据类型前面加static，在数据成员名前面要加上类名+作用域限定符</li>
+<li>如果有多条静态数据成员，那么它们的初始化顺序需要与声明顺序一致（规范）</li>
+<li>静态成员在访问时可以通过对象访问，<strong>也可以直接通过类名::成员名的形式</strong>（更常用）</li>
+</ol>
+<h1 id="7-特殊的成员函数"><a href="#7-特殊的成员函数" class="headerlink" title="7 特殊的成员函数"></a>7 特殊的成员函数</h1><p>除了特殊的数据成员以外， C++ 类中还有两种特殊的成员函数：静态成员函数和 const 成员函数。我们先来看看静态成员函数。</p>
+<h2 id="7-1-静态成员函数"><a href="#7-1-静态成员函数" class="headerlink" title="7.1 静态成员函数"></a>7.1 静态成员函数</h2><p>在某一个成员函数的前面加上static关键字，这个函数就是静态成员函数。静态成员函数具有以下特点：<br>（1）<mark>静态成员函数不依赖于某一个对象；</mark><br>（2）静态成员函数可以通过对象调用，但更常见的方式是<strong>通过类名加上作用域限定符调用</strong>；<br>（3）静态成员函数没有this指针；<br>（4）<strong>静态成员函数中无法直接用成员的名字访问非静态的成员（数据成员、成员函数）</strong>，只能访问静态数据成员或调用静态成员函数（因为没有this指针）。</p>
+<p>构造函数、拷贝构造、赋值运算符函数、析构函数比较特殊，可以在静态成员函数中调用。</p>
+<p>注：但是非静态的成员函数可以访问静态成员。</p>
+<p>静态成员函数不能是构造函数&#x2F;析构函数&#x2F;赋值运算符函数&#x2F;拷贝构造（因为这四个函数都会访问所有的数据成员，而static成员函数没有this指针）</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Computer</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="built_in">Computer</span>(<span class="type">const</span> <span class="type">char</span> * brand, <span class="type">double</span> price)</span><br><span class="line">	: _brand(<span class="keyword">new</span> <span class="type">char</span>[<span class="built_in">strcpy</span>(brand) + <span class="number">1</span>]())</span><br><span class="line">	, _price(price)</span><br><span class="line">	&#123;</span><br><span class="line">		_totalPrice += _price;</span><br><span class="line">	&#125;</span><br><span class="line">   	<span class="comment">//...</span></span><br><span class="line">	<span class="comment">// 静态成员函数</span></span><br><span class="line">	<span class="function"><span class="type">static</span> <span class="type">void</span> <span class="title">printTotalPrice</span><span class="params">()</span></span></span><br><span class="line"><span class="function">	</span>&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;totalPrice:&quot;</span> &lt;&lt; _totalPrice &lt;&lt; endl;</span><br><span class="line">        cout &lt;&lt; _price &lt;&lt; endl; <span class="comment">// error</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">	<span class="type">char</span> * _brand;</span><br><span class="line">	<span class="type">double</span> _price;</span><br><span class="line">	<span class="type">static</span> <span class="type">double</span> _totalPrice;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="type">double</span> Computer::_totalPrice = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+<p>想要完成Computer类的总价计算逻辑，除了构造函数之外，还需要做哪些补充呢？请结合前面学到的知识完成这个功能：无论是创建多个Computer对象，还是进行Computer对象的复制、赋值，Computer的总价始终能够正确输出。</p>
+<h2 id="7-2-const-成员函数"><a href="#7-2-const-成员函数" class="headerlink" title="7.2 const 成员函数"></a>7.2 const 成员函数</h2><p>之前已经介绍了 const 的应用，实际上， const 在类成员函数中还有种特殊的用法。在成员函数的参数列表之后，函数执行体之前加上const关键字，这个函数就是const成员函数。<br><strong>形式：</strong> <code>void func() const {}</code><br><strong>特点：</strong></p>
+<ol>
+<li>const成员函数中，不能修改对象的数据成员；</li>
+<li>当编译器发现该函数是const成员函数时，会自动将this指针设置为双重const限定的指针；</li>
+</ol>
+<h1 id="8-对象的组织"><a href="#8-对象的组织" class="headerlink" title="8 对象的组织"></a>8 对象的组织</h1><p>有了自己定义的类，或者使用别人定义好的类创建对象，其机制与使用内置类型创建普通变量几乎完全一致，同样可以创建 const 对象、创建指向对象的指针、创建对象数组，还可使用new(delete) 来创建(回收)堆对象。</p>
+<h2 id="8-1-const-对象"><a href="#8-1-const-对象" class="headerlink" title="8.1 const 对象"></a>8.1 const 对象</h2><p>类对象也可以声明为 const 对象，一般来说，能作用于 const 对象的成员函数除了构造函数和析构函数，就只有 const 成员函数了。因为 const 对象只能被创建、撤销和只读访问，写操作是不允许的。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">const</span> Point <span class="title">pt</span><span class="params">(<span class="number">1</span>,<span class="number">2</span>)</span></span>;</span><br><span class="line">pt.<span class="built_in">print</span>();</span><br></pre></td></tr></table></figure>
+
+<p><strong>const对象与const成员函数的规则：</strong></p>
+<ol>
+<li>当类中有const成员函数和非const成员函数重载时，const对象会调用const成员函数，非const对象会调用非const成员函数；</li>
+<li>当类中只有一个const成员函数时，无论const对象还是非const对象都可以调用这个版本；</li>
+<li>当类中只有一个非const成员函数时，const对象就不能调用非const版本。<br><strong>总结：</strong> <mark>如果一个成员函数中确定不会修改数据成员，就把它定义为const成员函数。</mark></li>
+</ol>
+<p><strong>思考1：</strong><br>一个类中可以有参数形式“完全相同”的两个成员函数（const版本与非const版本），既然没有报错重定义，那么它们必然是构成了重载，为什么它们能构成重载呢？</p>
+<p>—— 参数(this指针)的类型是不同的。</p>
+<p><strong>思考2：</strong><br>const成员函数中不允许修改数据成员，const数据成员初始化后不允许修改，其效果是否相同？请动手验证下面的问题</p>
+<p>举例，如果有一个普通的指针成员，在const成员函数中，它被如何限制？</p>
+<blockquote>
+<p>对于普通类型的数据成员，const数据成员初始化后不允许修改，在const成员函数中无论是const数据成员还是非const数据成员，都不能修改值；</p>
+<p>对于指针类型的数据成员：</p>
+<p>const int * p，初始化之后在任何地方都不能修改其指向的值（无论在const成员函数中还是在非const成员函数中），在非const成员函数中可以修改指向，在const成员函数中不能修改指向；</p>
+<p>int * p,在非const成员函数中可以修改指向，也可以修改值，在const成员函数中不能修改指向，可以修改指向的值。</p>
+</blockquote>
+<h2 id="8-2-指向对象的指针"><a href="#8-2-指向对象的指针" class="headerlink" title="8.2 指向对象的指针"></a>8.2 指向对象的指针</h2><p>对象占据一定的内存空间，和普通变量一致， C++ 程序中采用如下形式声明指向对象的指针：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">类名 * 指针名 = [初始化表达式];</span><br></pre></td></tr></table></figure>
+<p>初始化表达式是可选的，既可以通过取地址（&amp;对象名）给指针初始化，也可以通过申请动态内存给指针初始化，或者干脆不初始化（比如置为 nullptr ），在程序中再对该指针赋值。指针中存储的是对象所占内存空间的首地址。针对上述定义，则下列形式都是合法的：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Point <span class="title">pt</span><span class="params">(<span class="number">1</span>, <span class="number">2</span>)</span></span>;</span><br><span class="line">Point * p1 = <span class="literal">nullptr</span>;</span><br><span class="line">Point * p2 = &amp;pt;</span><br><span class="line">Point * p3 = <span class="keyword">new</span> <span class="built_in">Point</span>(<span class="number">3</span>, <span class="number">4</span>);</span><br></pre></td></tr></table></figure>
+<p>问题：定义好这些指针后，如何利用指针去调用Point类的成员函数print？请试验一下</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p2-&gt;<span class="built_in">print</span>();</span><br><span class="line">(*p2).<span class="built_in">print</span>();</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-3-对象数组"><a href="#8-3-对象数组" class="headerlink" title="8.3 对象数组"></a>8.3 对象数组</h2><p>对象数组和标准类型数组的使用方法并没有什么不同，也有声明、初始化和使用等步骤。<br>对象数组的声明</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Point pts[<span class="number">2</span>];</span><br></pre></td></tr></table></figure>
+<p>这种格式会自动调用默认构造函数或所有参数都是缺省值的构造函数。</p>
+<p>对象数组的初始化（可以在声明时进行初始化）</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Point pts[<span class="number">2</span>] = &#123;<span class="built_in">Point</span>(<span class="number">1</span>, <span class="number">2</span>), <span class="built_in">Point</span>(<span class="number">3</span>, <span class="number">4</span>)&#125;;</span><br><span class="line">Point pts[] = &#123;<span class="built_in">Point</span>(<span class="number">1</span>, <span class="number">2</span>), <span class="built_in">Point</span>(<span class="number">3</span>, <span class="number">4</span>)&#125;;</span><br><span class="line">Point pts[<span class="number">5</span>] = &#123;<span class="built_in">Point</span>(<span class="number">1</span>, <span class="number">2</span>), <span class="built_in">Point</span>(<span class="number">3</span>, <span class="number">4</span>)&#125;;</span><br><span class="line"><span class="comment">// 或者</span></span><br><span class="line">Point pts[<span class="number">2</span>] = &#123;&#123;<span class="number">1</span>, <span class="number">2</span>&#125;, &#123;<span class="number">3</span>, <span class="number">4</span>&#125;&#125;;</span><br><span class="line">pts-&gt;<span class="built_in">print</span>();  <span class="comment">//（1,2）</span></span><br><span class="line">(pts + <span class="number">1</span>)-&gt;<span class="built_in">print</span>(); <span class="comment">//(3,4)</span></span><br><span class="line">Point pts[] = &#123;&#123;<span class="number">1</span>, <span class="number">2</span>&#125;, &#123;<span class="number">3</span>, <span class="number">4</span>&#125;&#125;;</span><br><span class="line">Point pts[<span class="number">5</span>] = &#123;&#123;<span class="number">1</span>, <span class="number">2</span>&#125;, &#123;<span class="number">3</span>, <span class="number">4</span>&#125;&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-4-堆对象"><a href="#8-4-堆对象" class="headerlink" title="8.4 堆对象"></a>8.4 堆对象</h2><p>和把一个简单变量创建在动态存储区一样，可以用 new 和 delete 表达式为对象分配动态存储区，在拷贝构造函数一节中已经介绍了为类内的指针成员分配动态内存的相关范例，这里主要讨论如何为对象和对象数组动态分配内存。如：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">test</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Point * pt1 = <span class="keyword">new</span> <span class="built_in">Point</span>(<span class="number">11</span>, <span class="number">12</span>);</span><br><span class="line">	pt1-&gt;<span class="built_in">print</span>();</span><br><span class="line">	<span class="keyword">delete</span> pt1;</span><br><span class="line">	pt1 = <span class="literal">nullptr</span>;</span><br><span class="line">    </span><br><span class="line">	Point * pt2 = <span class="keyword">new</span> Point[<span class="number">5</span>](); <span class="comment">// 注意</span></span><br><span class="line">	pt2-&gt;<span class="built_in">print</span>();</span><br><span class="line">	(pt2 + <span class="number">1</span>)-&gt;<span class="built_in">print</span>();</span><br><span class="line">	<span class="keyword">delete</span> [] pt2;</span><br><span class="line">    pt2 = <span class="literal">nullptr</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="9-new-delete-表达式的工作步骤-了解"><a href="#9-new-delete-表达式的工作步骤-了解" class="headerlink" title="9 new&#x2F;delete 表达式的工作步骤(了解)"></a>9 new&#x2F;delete 表达式的工作步骤(了解)</h1><p>现在我们已经学习了new和delete的基本使用，在new&#x2F;delete和malloc&#x2F;free作对比时提到了二者的最本质区别 —— new&#x2F;delete是表达式，而malloc&#x2F;free是库函数。</p>
+<p>那么new&#x2F;delete表达式的底层工作步骤是怎样的呢？我们有必要进行了解，因为很多时候写出的bug就藏在这个工作步骤中。</p>
+<h2 id="9-1-new-表达式的工作步骤"><a href="#9-1-new-表达式的工作步骤" class="headerlink" title="9.1 new 表达式的工作步骤"></a>9.1 new 表达式的工作步骤</h2><p>对于自定义类型而言：<br><strong>使用new表达式时发生的三个步骤</strong>：</p>
+<ol>
+<li>调用operator new标准库函数申请未类型化的空间</li>
+<li>在该空间上调用该类型的构造函数初始化对象</li>
+<li>返回指向该对象的相应类型的指针</li>
+</ol>
+<h2 id="9-2-delete-表达式的工作步骤"><a href="#9-2-delete-表达式的工作步骤" class="headerlink" title="9.2 delete 表达式的工作步骤"></a>9.2 delete 表达式的工作步骤</h2><p>对于自定义类型而言：<br><strong>使用delete表达式时发生的两个步骤</strong>：</p>
+<ol>
+<li>调用析构函数,回收数据成员申请的资源(堆空间)</li>
+<li>调用operator delete库函数回收本对象所在的空间</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 默认的 operator new</span></span><br><span class="line"><span class="function"><span class="type">void</span> * <span class="keyword">operator</span> <span class="title">new</span><span class="params">(<span class="type">size_t</span> sz)</span> </span>&#123;</span><br><span class="line">    <span class="type">void</span> * ret = <span class="built_in">malloc</span>(sz);</span><br><span class="line">	<span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 默认的 operator delete</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="keyword">operator</span> <span class="title">delete</span><span class="params">(<span class="type">void</span> * p)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">free</span>(p);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="9-3-创建对象的探究"><a href="#9-3-创建对象的探究" class="headerlink" title="9.3 创建对象的探究"></a>9.3 创建对象的探究</h2><p>定义一个类，即使什么成员函数也不定义，依然可以创建栈对象和堆对象。之前我们知道了构造函数和析构函数会自动提供默认版本，那么能够创建堆对象、回收堆对象，说明会自动提供默认的operator new &#x2F; operator delete函数。</p>
+<p>默认的operator new &#x2F; operator delete函数实际上就是通过malloc &#x2F; free 实现的申请 &#x2F; 回收堆空间。</p>
+<p>请探究：</p>
+<ul>
+<li><strong>创建堆对象需要什么条件？</strong><br>思路：将创建、销毁对象过程中所调用到的函数一一设为私有，私有的成员函数在类外就无法被直接调用了。</li>
+</ul>
+<p>需要公有的operator new、operator delete、构造函数，对析构函数没有要求；在销毁堆对象的时候，才会调用析构函数。</p>
+<ul>
+<li><strong>创建栈对象需要什么条件？</strong><br>需要公有的构造函数、析构函数，对operator new&#x2F;operator delete没有要求。</li>
+</ul>
+<p><strong>根据探究得出的结论，仍以Student类为例，想要实现以下需求，应该怎么做</strong></p>
+<ul>
+<li><p>只能生成栈对象 , 不能生成堆对象<br>可以将operator new&#x2F;operator delete 设为私有。</p>
+</li>
+<li><p>只能生成堆对象 ，不能生成栈对象<br>可以将析构函数设为私有。</p>
+</li>
+</ul>
+<p>**总结：**我们需要了解new&#x2F;delete表达式的工作步骤，以此为依据更合理地设计类的成员函数来进行对象的创建和回收。<br>**operator new&#x2F;operator delete在平时不需要特别地写出，使用默认的即可。**只在如上的特别的需求下，可以显式定义出来，实现不同的限制效果。</p>
+<h1 id="10-单例模式-重点"><a href="#10-单例模式-重点" class="headerlink" title="10 单例模式(重点*)"></a>10 单例模式(重点*)</h1><p>单例模式是23种常用设计模式中最简单的设计模式之一，它提供了一种创建对象的方式，确保只有单个对象被创建。这个设计模式主要目的是想在整个系统中只能出现类的一个实例，即一个类只有一个对象。</p>
+
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E7%B1%BB/">类</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%AF%B9%E8%B1%A1/">对象</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">单例模式</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+                                    </li>
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E5%8A%A8%E6%80%81%E6%95%B0%E7%BB%84/">动态数组</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2026/05/11/C%20and%20C++/"
+                                   title="C and C++"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">C and C++</span>
+                                        <span class="post-nav-item">Next posts</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%9D%E6%83%B3"><span class="nav-text">1 面向对象思想</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-text">2 类的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="nav-text">2.1 访问修饰符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-struct%E4%B8%8Eclass%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="nav-text">2.2 struct与class的对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-text">2.3 成员函数的定义</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="nav-text">3 对象的创建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA%E8%A7%84%E5%88%99"><span class="nav-text">3.1 对象的创建规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%95%B0%E6%8D%AE%E6%88%90%E5%91%98%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-text">3.2 对象的数据成员的初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E5%AF%B9%E8%B1%A1%E6%89%80%E5%8D%A0%E7%A9%BA%E9%97%B4%E7%9A%84%E5%A4%A7%E5%B0%8F"><span class="nav-text">3.3 对象所占空间的大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E6%8C%87%E9%92%88%E6%95%B0%E6%8D%AE%E6%88%90%E5%91%98"><span class="nav-text">3.4 指针数据成员</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%94%80%E6%AF%81"><span class="nav-text">4 对象的销毁</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0"><span class="nav-text">4.1 自定义析构函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8%E6%97%B6%E6%9C%BA"><span class="nav-text">4.2 析构函数的调用时机</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E6%9C%AC%E7%B1%BB%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%A4%8D%E5%88%B6"><span class="nav-text">5 本类对象的复制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="nav-text">5.1 拷贝构造函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-1-%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-text">5.1.1 拷贝构造函数的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-2-%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8%E6%97%B6%E6%9C%BA-%E9%87%8D%E8%A6%81"><span class="nav-text">5.1.2 拷贝构造函数的调用时机(重要)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-3-%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E5%BD%A2%E5%BC%8F%E6%8E%A2%E7%A9%B6"><span class="nav-text">5.1.3 拷贝构造函数的形式探究*</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6%E5%87%BD%E6%95%B0"><span class="nav-text">5.2 赋值运算符函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-1-%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6%E5%87%BD%E6%95%B0%E7%9A%84%E5%BD%A2%E5%BC%8F"><span class="nav-text">5.2.1 赋值运算符函数的形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-2-this%E6%8C%87%E9%92%88"><span class="nav-text">5.2.2 this指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-3-%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-text">5.2.3 赋值运算符函数的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-4-%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6%E5%87%BD%E6%95%B0%E7%9A%84%E5%BD%A2%E5%BC%8F%E6%8E%A2%E7%A9%B6"><span class="nav-text">5.2.4 赋值运算符函数的形式探究*</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-3-%E4%B8%89%E5%90%88%E6%88%90%E5%8E%9F%E5%88%99"><span class="nav-text">5.3 三合成原则*</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-%E7%89%B9%E6%AE%8A%E7%9A%84%E6%95%B0%E6%8D%AE%E6%88%90%E5%91%98"><span class="nav-text">6 特殊的数据成员</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-%E5%B8%B8%E9%87%8F%E6%95%B0%E6%8D%AE%E6%88%90%E5%91%98"><span class="nav-text">6.1 常量数据成员</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E6%88%90%E5%91%98"><span class="nav-text">6.2 引用数据成员</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-%E5%AF%B9%E8%B1%A1%E6%88%90%E5%91%98"><span class="nav-text">6.3 对象成员</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-%E9%9D%99%E6%80%81%E6%95%B0%E6%8D%AE%E6%88%90%E5%91%98"><span class="nav-text">6.4 静态数据成员</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-%E7%89%B9%E6%AE%8A%E7%9A%84%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0"><span class="nav-text">7 特殊的成员函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#7-1-%E9%9D%99%E6%80%81%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0"><span class="nav-text">7.1 静态成员函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-2-const-%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0"><span class="nav-text">7.2 const 成员函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%BB%84%E7%BB%87"><span class="nav-text">8 对象的组织</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#8-1-const-%E5%AF%B9%E8%B1%A1"><span class="nav-text">8.1 const 对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-2-%E6%8C%87%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%8C%87%E9%92%88"><span class="nav-text">8.2 指向对象的指针</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-3-%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84"><span class="nav-text">8.3 对象数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-4-%E5%A0%86%E5%AF%B9%E8%B1%A1"><span class="nav-text">8.4 堆对象</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#9-new-delete-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%AD%A5%E9%AA%A4-%E4%BA%86%E8%A7%A3"><span class="nav-text">9 new&#x2F;delete 表达式的工作步骤(了解)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#9-1-new-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="nav-text">9.1 new 表达式的工作步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-2-delete-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="nav-text">9.2 delete 表达式的工作步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-3-%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%8E%A2%E7%A9%B6"><span class="nav-text">9.3 创建对象的探究</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#10-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F-%E9%87%8D%E7%82%B9"><span class="nav-text">10 单例模式(重点*)</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+    &copy;&nbsp;<span>2024</span>&nbsp;-&nbsp;2026
+    
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Ebo</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        Powered by&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;&&nbsp;Theme&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+    </div>
+
+    
+
+    
+        <div class="count-info info-item">
+            
+
+            
+
+            
+                <span class="count-item border-box pv">
+                    <span class="item-type border-box">Page View</span>
+                    <span class="item-value border-box pv" id="busuanzi_value_site_pv"></span>
+                </span>
+            
+        </div>
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%9D%E6%83%B3"><span class="nav-text">1 面向对象思想</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E7%B1%BB%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-text">2 类的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E8%AE%BF%E9%97%AE%E4%BF%AE%E9%A5%B0%E7%AC%A6"><span class="nav-text">2.1 访问修饰符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-struct%E4%B8%8Eclass%E7%9A%84%E5%AF%B9%E6%AF%94"><span class="nav-text">2.2 struct与class的对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-text">2.3 成员函数的定义</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA"><span class="nav-text">3 对象的创建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%88%9B%E5%BB%BA%E8%A7%84%E5%88%99"><span class="nav-text">3.1 对象的创建规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%95%B0%E6%8D%AE%E6%88%90%E5%91%98%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-text">3.2 对象的数据成员的初始化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E5%AF%B9%E8%B1%A1%E6%89%80%E5%8D%A0%E7%A9%BA%E9%97%B4%E7%9A%84%E5%A4%A7%E5%B0%8F"><span class="nav-text">3.3 对象所占空间的大小</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-4-%E6%8C%87%E9%92%88%E6%95%B0%E6%8D%AE%E6%88%90%E5%91%98"><span class="nav-text">3.4 指针数据成员</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%94%80%E6%AF%81"><span class="nav-text">4 对象的销毁</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0"><span class="nav-text">4.1 自定义析构函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8%E6%97%B6%E6%9C%BA"><span class="nav-text">4.2 析构函数的调用时机</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E6%9C%AC%E7%B1%BB%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%A4%8D%E5%88%B6"><span class="nav-text">5 本类对象的复制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#5-1-%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="nav-text">5.1 拷贝构造函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-1-%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-text">5.1.1 拷贝构造函数的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-2-%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E8%B0%83%E7%94%A8%E6%97%B6%E6%9C%BA-%E9%87%8D%E8%A6%81"><span class="nav-text">5.1.2 拷贝构造函数的调用时机(重要)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-3-%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E5%BD%A2%E5%BC%8F%E6%8E%A2%E7%A9%B6"><span class="nav-text">5.1.3 拷贝构造函数的形式探究*</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-2-%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6%E5%87%BD%E6%95%B0"><span class="nav-text">5.2 赋值运算符函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-1-%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6%E5%87%BD%E6%95%B0%E7%9A%84%E5%BD%A2%E5%BC%8F"><span class="nav-text">5.2.1 赋值运算符函数的形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-2-this%E6%8C%87%E9%92%88"><span class="nav-text">5.2.2 this指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-3-%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-text">5.2.3 赋值运算符函数的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-4-%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6%E5%87%BD%E6%95%B0%E7%9A%84%E5%BD%A2%E5%BC%8F%E6%8E%A2%E7%A9%B6"><span class="nav-text">5.2.4 赋值运算符函数的形式探究*</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-3-%E4%B8%89%E5%90%88%E6%88%90%E5%8E%9F%E5%88%99"><span class="nav-text">5.3 三合成原则*</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-%E7%89%B9%E6%AE%8A%E7%9A%84%E6%95%B0%E6%8D%AE%E6%88%90%E5%91%98"><span class="nav-text">6 特殊的数据成员</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-%E5%B8%B8%E9%87%8F%E6%95%B0%E6%8D%AE%E6%88%90%E5%91%98"><span class="nav-text">6.1 常量数据成员</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E6%88%90%E5%91%98"><span class="nav-text">6.2 引用数据成员</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-%E5%AF%B9%E8%B1%A1%E6%88%90%E5%91%98"><span class="nav-text">6.3 对象成员</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-%E9%9D%99%E6%80%81%E6%95%B0%E6%8D%AE%E6%88%90%E5%91%98"><span class="nav-text">6.4 静态数据成员</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#7-%E7%89%B9%E6%AE%8A%E7%9A%84%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0"><span class="nav-text">7 特殊的成员函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#7-1-%E9%9D%99%E6%80%81%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0"><span class="nav-text">7.1 静态成员函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-2-const-%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0"><span class="nav-text">7.2 const 成员函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8-%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%BB%84%E7%BB%87"><span class="nav-text">8 对象的组织</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#8-1-const-%E5%AF%B9%E8%B1%A1"><span class="nav-text">8.1 const 对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-2-%E6%8C%87%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%8C%87%E9%92%88"><span class="nav-text">8.2 指向对象的指针</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-3-%E5%AF%B9%E8%B1%A1%E6%95%B0%E7%BB%84"><span class="nav-text">8.3 对象数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-4-%E5%A0%86%E5%AF%B9%E8%B1%A1"><span class="nav-text">8.4 堆对象</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#9-new-delete-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%AD%A5%E9%AA%A4-%E4%BA%86%E8%A7%A3"><span class="nav-text">9 new&#x2F;delete 表达式的工作步骤(了解)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#9-1-new-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="nav-text">9.1 new 表达式的工作步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-2-delete-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%B7%A5%E4%BD%9C%E6%AD%A5%E9%AA%A4"><span class="nav-text">9.2 delete 表达式的工作步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-3-%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%8E%A2%E7%A9%B6"><span class="nav-text">9.3 创建对象的探究</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#10-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F-%E9%87%8D%E7%82%B9"><span class="nav-text">10 单例模式(重点*)</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local search -->
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+<!-- lazyload -->
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
